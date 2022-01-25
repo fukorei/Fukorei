@@ -101,9 +101,9 @@ client.on("messageCreate",message=>{
         message.channel.send('no')
     }
 
-    else if (message.content === 'hey segs') {
+    else if (message.content === "hey segs") {
         message.channel.send('yes?');
-      }
+    }
 });
 
 client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
