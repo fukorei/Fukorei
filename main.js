@@ -19,7 +19,7 @@ client.on('ready', () => {
     console.log('Online!');
     client.user.setPresence({
         status: 'idle',
-        activity: {
+        game: {
             name: 'segs horny',
             type: 'PLAYING'
         }
