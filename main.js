@@ -16,14 +16,7 @@ for (const file of commandFiles) {
 }
 
 client.on('ready', () => {
-    console.log('Online!');
-    client.user.setPresence({
-        status: 'idle',
-        game: {
-            name: 'segs horny',
-            type: 'PLAYING'
-        }
-    });
+    client.user.setActivity(`sex dungeon`, {type: 'PLAYING'});
 });
 
 client.on("messageCreate",message=>{
