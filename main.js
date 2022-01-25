@@ -92,6 +92,12 @@ client.on("messageCreate",message=>{
     else if(command === 'qa'){
         message.channel.send('<@602146178636709888>')
     }
+
+    else if(command === 'spamqa'){
+        for(let i = 0; i<=5; i++){
+            message.channel.send('<@602146178636709888>')
+        }
+    }
 });
 
 client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
