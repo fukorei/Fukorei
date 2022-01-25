@@ -101,7 +101,7 @@ client.on("messageCreate",message=>{
         message.channel.send('no')
     }
 
-    else if (message.content == "hey segs") {
+    else if (message.content === "hey segs") {
         message.channel.send("yes?");
       }
 });
