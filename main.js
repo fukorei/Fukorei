@@ -16,6 +16,7 @@ for (const file of commandFiles) {
 }
 
 client.on('ready', () => {
+    console.log('Online!')
     client.user.setActivity(`your mom`);
 });
 
@@ -93,7 +94,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'sadge'){
-        message.channel.send('<:sadge:893979243279691817>')
+        message.channel.send('<:pepe_sadge:929713686615052298>')
     }
 });
 
