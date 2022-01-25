@@ -16,7 +16,7 @@ for (const file of commandFiles) {
 }
 
 client.on('ready', () => {
-    client.user.setActivity(`sex dungeon`, {type: 'PLAYING'});
+    client.user.setActivity(`welcome to the sex dungeon`);
 });
 
 client.on("messageCreate",message=>{
