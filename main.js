@@ -91,6 +91,10 @@ client.on("messageCreate",message=>{
             message.channel.send('<@602146178636709888>')
         }
     }
+
+    else if(command === 'sadge'){
+        message.channel.send('<:sadge:893979243279691817>')
+    }
 });
 
 client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
