@@ -14,7 +14,6 @@ for (const file of commandFiles) {
 
     client.commands.set(command.name, command);
 }
-console.log(client.commands)
 
 client.on('ready', () => {
     console.log('Online!');
@@ -22,7 +21,7 @@ client.on('ready', () => {
         status: 'idle',
         activity: {
             name: 'segs horny',
-            type: 'PLAYING',
+            type: 'PLAYING'
         }
     });
 });
