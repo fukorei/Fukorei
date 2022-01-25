@@ -18,6 +18,7 @@ console.log(client.commands)
 
 client.on('ready', () => {
     console.log('Online!');
+    bot.user.setActivity('welcome to the sex dungeon')
 });
 
 client.on("messageCreate",message=>{
