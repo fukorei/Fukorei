@@ -96,6 +96,10 @@ client.on("messageCreate",message=>{
     else if(command === 'sadge'){
         message.channel.send('<:pepe_sadge:929713686615052298>')
     }
+
+    else if(command === "help"){
+        message.channel.send('no')
+    }
 });
 
 client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
