@@ -18,13 +18,13 @@ console.log(client.commands)
 
 client.on('ready', () => {
     console.log('Online!');
-    bot.user.setPresence({
+    client.user.setPresence({
         status: 'idle',
         activity: {
-           name: 'segs horny',
-            type: 'WATCHING'
-         }
-      });
+            name: 'segs horny',
+            type: 'PLAYING',
+        }
+    });
 });
 
 client.on("messageCreate",message=>{
