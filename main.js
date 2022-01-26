@@ -4,6 +4,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const prefix ='segs ';
 const fs = require('fs');
 const { MessageEmbed } = require('discord.js');
+const inlinereply = require('discord-reply');
 
 
 client.commands = new Discord.Collection();
@@ -98,7 +99,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === "help"){
-        message.channel.send('no')
+        message.lineReply('no')
     }
 });
 
