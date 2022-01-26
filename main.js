@@ -100,7 +100,15 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === "help"){
-        message.inlineReply('no')
+        const Embed = new Discord.MessageEmbed()
+        .setColor("#ddbec3")
+        .addField("segs horny", `AWOOOOOOOOOOOOGA SEGGGGGGGGGGS`)
+        .addField("segs ping:", `this literally exists to lmk that my bot isnt ded`)
+        .addField("segs user", `shows user info`)
+        .addField("segs spamqa", `spam ping the fuck out of that mf`)
+        .addField("segs sadge", `sadge`)
+        .addField("segs hasagi", `yasuo thong thao 7`)
+        message.channel.send({ embeds: [Embed] });
     }
 });
 
