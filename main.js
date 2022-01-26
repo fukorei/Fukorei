@@ -100,7 +100,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === "help"){
-        message.inlineReplyNoMention('no')
+        message.inlineReply('no')
     }
 });
 
