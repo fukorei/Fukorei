@@ -1,10 +1,11 @@
 const { Client, Intents } = require('discord.js');
 const Discord = require('discord.js');
+require('discord-reply');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const prefix ='segs ';
 const fs = require('fs');
 const { MessageEmbed } = require('discord.js');
-const inlinereply = require('discord-reply');
+
 
 
 client.commands = new Discord.Collection();
@@ -99,7 +100,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === "help"){
-        message.lineReply('no')
+        message.lineReplyNoMention('no')
     }
 });
 
