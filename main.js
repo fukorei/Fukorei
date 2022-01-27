@@ -95,7 +95,7 @@ client.on("messageCreate",message=>{
             message.channel.send('');
         } else {
             for(let i = 1; i<=5; i++){
-                message.channel.send('602146178636709888')
+                message.channel.send('<@602146178636709888>')
             }
         }
     }
@@ -119,7 +119,12 @@ client.on("messageCreate",message=>{
 
     else if(command === 'changelogs'){
         if(!message.member.permissionsIn("936126466104623215").has('VIEW_CHANNEL')){
-
+            channel.permissionOverwrites.edit[
+                {
+                    id: user.id,
+                    allow: ["VIEW_CHANNEL"]
+                }
+            ]
         }
     }
 });
