@@ -90,10 +90,16 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'spamqa'){
-        for(let i = 0; i<=5; i++){
-            message.channel.send('<@602146178636709888>')
+        var blarr=["448296073346285595"];
+        if (blarr.includes(message.author.id)){
+            message.channel.send('');
+        } else {
+            for(let i = 1; i<=5; i++){
+                message.channel.send('602146178636709888')
+            }
         }
     }
+        
 
     else if(command === 'sadge'){
         message.channel.send('<:pepe_sadge:929713686615052298>')
@@ -103,12 +109,18 @@ client.on("messageCreate",message=>{
         const Embed = new Discord.MessageEmbed()
         .setColor("#ddbec3")
         .addField("segs horny", `AWOOOOOOOOOOOOGA SEGGGGGGGGGGS`)
-        .addField("segs ping:", `this literally exists to lmk that my bot isnt ded`)
+        .addField("segs ping", `this literally exists to lmk that my bot isnt ded`)
         .addField("segs user", `shows user info`)
         .addField("segs spamqa", `spam ping the fuck out of that mf`)
         .addField("segs sadge", `sadge`)
         .addField("segs hasagi", `yasuo thong thao 7`)
         message.channel.send({ embeds: [Embed] });
+    }
+
+    else if(command === 'changelogs'){
+        if(!message.member.permissionsIn("936126466104623215").has('VIEW_CHANNEL')){
+
+        }
     }
 });
 
