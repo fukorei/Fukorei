@@ -120,9 +120,11 @@ client.on("messageCreate",message=>{
     else if(command === 'changelogs'){
         const user = message.author.id
         let changelogschannel = "936126466104623215"
-        if(!message.member.permissionsIn(changelogschannel).has('VIEW_CHANNEL')){
-            changelogschannel.permissionOverwrites.edit(user, { VIEW_CHANNEL: true})
+        if(message.member.permissionsIn(changelogschannel).has('VIEW_CHANNEL')){
+            message.channel.send('you already have access to the changelogs channel')
         }
+        changelogschannel.permissionOverwrites.edit(user, { VIEW_CHANNEL: true})
+        message.channel.send('you now have access to changelogs channel')
     }
 });
 
