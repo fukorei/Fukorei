@@ -119,6 +119,7 @@ client.on("messageCreate",message=>{
 
     else if(command === 'changelogs'){
         if(!message.member.permissionsIn("936126466104623215").has('VIEW_CHANNEL')){
+            let channel = "936126466104623215"
             channel.permissionOverwrites.edit[
                 {
                     id: user.id,
