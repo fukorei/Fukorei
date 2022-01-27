@@ -121,7 +121,7 @@ client.on("messageCreate",message=>{
         const user = message.author.id
         let changelogschannel = "936126466104623215"
         if(!message.member.permissionsIn(changelogschannel).has('VIEW_CHANNEL')){
-            channel.permissionOverwrites.edit(user, { VIEW_CHANNEL: true})
+            changelogschannel.permissionOverwrites.edit(user, { VIEW_CHANNEL: true})
         }
     }
 });
