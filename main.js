@@ -30,6 +30,10 @@ client.on("messageCreate",message=>{
     else if(message.content === 'ge v dok'){
         message.channel.send("🪑👗🔴'")
     }
+
+    else if(message.content.toLowerCase() === 'qua ghe gom'){
+        message.channel.send('va day la pho lon ti lo!')
+    }
 }); 
 
 client.on("messageCreate",message=>{
