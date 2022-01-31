@@ -23,7 +23,8 @@ client.on('ready', () => {
 });
 
 client.on("messageCreate",message=>{
-    if(message.content.toLowerCase() === 'ge v s'){
+    var ghevs = ["ge v s", "ghe vay sao", "ghe v s"]
+    if(message.content.toLowerCase().includes(ghevs)){
         message.channel.send('🪑👗⭐🤨')
     }
 
