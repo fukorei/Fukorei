@@ -27,7 +27,7 @@ client.on("messageCreate",message=>{
     const cmd = args.shift()
 
     if(cmd === 'ge v s'){
-        message.channel.send('🪑👗⭐🤨')ss
+        message.channel.send('🪑👗⭐🤨')
     }
 
     else if(cmd === 'ge v dok'){
