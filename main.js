@@ -23,7 +23,7 @@ client.on('ready', () => {
 });
 
 client.on("messageCreate",message=>{
-    var ghevs = ["ge v s", "ghe vay sao", "ghe v s"]
+    var ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
     if(ghevs.includes(message.content.toLowerCase())){
         message.channel.send('🪑👗⭐🤨')
     }
@@ -34,6 +34,11 @@ client.on("messageCreate",message=>{
 
     else if(message.content.toLowerCase() === 'qua ghe gom'){
         message.channel.send('va day la pho lon ti lo!')
+    }
+
+    else if(message.content.toLowerCase() === 'folontilo'){
+        message.channel.send
+        ("Quá ghê gớm....🌚😳 \n Và đây là Folontilô!😱😱")
     }
 }); 
 
@@ -64,7 +69,6 @@ client.on("messageCreate",message=>{
         if(!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) {
             return message.channel.send('m tuổi gì mà đòi lock?');
         }
-
         else if (channel.permissionsFor(message.guild.id).has('SEND_MESSAGES') === false){
             return message.channel.send(`${channel} is already locked!`);
         }
