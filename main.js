@@ -24,8 +24,9 @@ client.on('ready', () => {
 
 client.on("messageCreate",message=>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
-
-    if(message.content === "ge v s"){
+    
+    const gevs = "ge v s"
+    if(message.content.includes(gevs)){
         message.channel.send('🪑👗⭐🤨')
     }
 
