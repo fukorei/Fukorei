@@ -23,6 +23,7 @@ client.on('ready', () => {
 });
 
 client.on("messageCreate",message=>{
+    const args = message.content
     const cmd = args.shift().toLowerCase();
 
     if(cmd === 'ge v s'){
