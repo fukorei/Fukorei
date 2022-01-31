@@ -23,13 +23,12 @@ client.on('ready', () => {
 });
 
 client.on("messageCreate",message=>{
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
-    
     const gevs = "ge v s"
     if(message.content.includes(gevs)){
         message.channel.send('🪑👗⭐🤨')
     }
 
+    if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
