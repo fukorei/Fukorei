@@ -28,6 +28,11 @@ client.on("messageCreate",message=>{
         message.channel.send('🪑👗⭐🤨')
     }
 
+    const gevdo = "ge v dok"
+    if(message.content.includes(gevdo){
+        message.channel.send("🪑👗🔴'")
+    }
+
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
