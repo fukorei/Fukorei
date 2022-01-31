@@ -23,14 +23,11 @@ client.on('ready', () => {
 });
 
 client.on("messageCreate",message=>{
-    const args = message.content.toLowerCase().split(/ +/);
-    const cmd = args.shift()
-
-    if(cmd === 'ge v s'){
+    if(message.content === 'ge v s'){
         message.channel.send('🪑👗⭐🤨')
     }
 
-    else if(cmd === 'ge v dok'){
+    else if(message.content === 'ge v dok'){
         message.channel.send("🪑👗🔴'")
     }
 }); 
