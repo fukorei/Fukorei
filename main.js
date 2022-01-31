@@ -29,7 +29,7 @@ client.on("messageCreate",message=>{
     }
 
     const gevdo = "ge v dok"
-    if(message.content.includes(gevdo){
+    if(message.content.includes(gevdo)){
         message.channel.send("🪑👗🔴'")
     }
 
