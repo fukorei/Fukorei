@@ -33,7 +33,7 @@ client.on("messageCreate",message=>{
     else if(cmd === 'ge v dok'){
         message.channel.send("🪑👗🔴'")
     }
-})
+});
 
 client.on("messageCreate",message=>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
