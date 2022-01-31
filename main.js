@@ -38,7 +38,7 @@ client.on("messageCreate",message=>{
 
     else if(message.content.toLowerCase() === 'folontilo'){
         message.channel.send
-        ("Quá ghê gớm....🌚😳 \n Và đây là Folontilô!😱😱")
+        ("Quá ghê gớm....🌚😳\nVà đây là Folontilô!😱😱\nFolontilô ui... 🥶🥶👿😳một tình huống múa phải nói là cực 👿gắt!!\n*music🤯\nThẹn thùng nhìn em quay gót đi mãi😞😞💔\nAnh đứng chết lặng trong mưa😭😭\nDù rằng bên😊😊 em đã có ai\nNhưng nơi đây anh 🤗🤗🥱vẫn còn chờ...")
     }
 }); 
 
