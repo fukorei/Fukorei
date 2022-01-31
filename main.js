@@ -24,10 +24,10 @@ client.on('ready', () => {
 
 client.on("messageCreate",message=>{
     const args = message.content.toLowerCase().split(/ +/);
-    const command = args.shift()
+    const cmd = args.shift()
 
     if(cmd === 'ge v s'){
-        message.channel.send('🪑👗⭐🤨')
+        message.channel.send('🪑👗⭐🤨')ss
     }
 
     else if(cmd === 'ge v dok'){
