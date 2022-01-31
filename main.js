@@ -25,6 +25,10 @@ client.on('ready', () => {
 client.on("messageCreate",message=>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
+    if(message.content === "ge v s"){
+        message.channel.send('🪑👗⭐🤨')
+    }
+
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
