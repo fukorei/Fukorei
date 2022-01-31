@@ -23,8 +23,8 @@ client.on('ready', () => {
 });
 
 client.on("messageCreate",message=>{
-    const args = message.content
-    const cmd = args.shift().toLowerCase();
+    const args = message.content.toLowerCase().split(/ +/);
+    const command = args.shift()
 
     if(cmd === 'ge v s'){
         message.channel.send('🪑👗⭐🤨')
@@ -33,7 +33,7 @@ client.on("messageCreate",message=>{
     else if(cmd === 'ge v dok'){
         message.channel.send("🪑👗🔴'")
     }
-});
+}); 
 
 client.on("messageCreate",message=>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
