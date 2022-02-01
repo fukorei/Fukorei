@@ -142,7 +142,8 @@ client.on("messageCreate",message=>{
 
         if(message.member.roles.cache.some(role => role.name === 'segs changelog')){
             message.channel.send('you already have access to the changelogs channel!')
+        }
     }
-};
+});
 
 client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
