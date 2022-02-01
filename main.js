@@ -142,8 +142,8 @@ client.on("messageCreate",message=>{
             message.channel.send('you already have access to the changelogs channel')
         }
         
-        let role = message.guild.roles.cache.find(r => r.id === "938008501970690068");
-        message.author.roles.add(role);
+        let role = message.member.guild.roles.cache.find(role => role.name === "segs changelog");
+        if (role) message.guild.members.cache.get(message.author.id).roles.add(role);
     }
 });
 
