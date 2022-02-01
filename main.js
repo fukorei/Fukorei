@@ -139,11 +139,12 @@ client.on("messageCreate",message=>{
         const user = message.author.id
         let changelogschannel = "936126466104623215"
         if(message.member.roles.cache.some(role => role.name === 'segs changelog')){
-            message.channel.send('you already have access to the changelogs channel')
+            message.channel.send('you already have access to the changelogs channel!')
         }
         
         let role = message.member.guild.roles.cache.find(role => role.name === "segs changelog");
         if (role) message.guild.members.cache.get(message.author.id).roles.add(role);
+        message.channel.send('you now have access to changelogs channel!')
     }
 });
 
