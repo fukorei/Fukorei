@@ -38,7 +38,7 @@ client.on("messageCreate",message=>{
 
     else if(message.content.toLowerCase() === 'folontilo'){
         message.channel.send
-        ("Quá ghê gớm....🌚😳\nVà đây là Folontilô!😱😱\nFolontilô ui... 🥶🥶👿😳một tình huống múa phải nói là cực 👿gắt!!\n*music🤯\nThẹn thùng nhìn em quay gót đi mãi😞😞💔\nAnh đứng chết lặng trong mưa😭😭\nDù rằng bên😊😊 em đã có ai\nNhưng nơi đây anh 🤗🤗🥱vẫn còn chờ...")
+        ("Quá ghê gớm....🌚😳\nVà đây là Folontilô!😱😱\nFolontilô ui... 🥶🥶👿😳một tình huống múa phải nói là cực 👿gắt!!\n*music🤯\nThẹn thùng nhìn em quay gót đi mãi😞😞💔\nAnh đứng chết lặng trong mưa😭😭\nDù rằng bên😊😊 em đã có aiS\nNhưng nơi đây anh 🤗🤗🥱vẫn còn chờ...")
     }
 }); 
 
@@ -138,11 +138,12 @@ client.on("messageCreate",message=>{
     else if(command === 'changelogs'){
         const user = message.author.id
         let changelogschannel = "936126466104623215"
-        if(message.member.permissionsIn(changelogschannel).has('VIEW_CHANNEL')){
+        if(message.author.roles.has("938008501970690068")){
             message.channel.send('you already have access to the changelogs channel')
         }
-        changelogschannel.permissionOverwrites.edit(user, { VIEW_CHANNEL: true})
-        message.channel.send('you now have access to changelogs channel')
+        
+        let role = message.guild.roles.cache.find(r => r.id === "938008501970690068");
+        message.author.roles.add(role);
     }
 });
 
