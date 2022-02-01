@@ -138,7 +138,7 @@ client.on("messageCreate",message=>{
     else if(command === 'changelogs'){
         const user = message.author.id
         let changelogschannel = "936126466104623215"
-        if(message.author.roles.includes("938008501970690068")){
+        if(message.member.roles.cache.some(role => role.name === 'segs changelog')){
             message.channel.send('you already have access to the changelogs channel')
         }
         
