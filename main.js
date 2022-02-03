@@ -40,6 +40,15 @@ client.on("messageCreate",message=>{
         message.channel.send
         ("Quá ghê gớm....🌚😳\nVà đây là Folontilô!😱😱\nFolontilô ui... 🥶🥶👿😳một tình huống múa phải nói là cực 👿gắt!!\n*music🤯\nThẹn thùng nhìn em quay gót đi mãi😞😞💔\nAnh đứng chết lặng trong mưa😭😭\nDù rằng bên😊😊 em đã có aiS\nNhưng nơi đây anh 🤗🤗🥱vẫn còn chờ...")
     }
+
+    var urmom = ["ur mom", "your mom"]
+    if(ghevs.includes(message.content.toLowerCase())){
+        message.channel.send('<:yourmom:938793655781695498>')
+    } 
+
+    if(message.content.toLowerCase() === 'kappa'){
+        message.channel.send('<:kappa:938793655991418921> ')
+    }
 }); 
 
 client.on("messageCreate",message=>{
@@ -132,6 +141,7 @@ client.on("messageCreate",message=>{
         .addField("segs spamqa", `spam ping the fuck out of that mf`)
         .addField("segs sadge", `sadge`)
         .addField("segs hasagi", `yasuo thong thao 7`)
+        .addField("segs changelogs", `get access to the changelogs channel`)
         message.channel.send({ embeds: [Embed] });
     }
 
