@@ -42,7 +42,7 @@ client.on("messageCreate",message=>{
     }
 
     var urmom = ["ur mom", "your mom"]
-    if(ghevs.includes(message.content.toLowerCase())){
+    if(urmom.includes(message.content.toLowerCase())){
         message.channel.send('<:yourmom:938793655781695498>')
     } 
 
