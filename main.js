@@ -135,7 +135,7 @@ client.on("messageCreate",message=>{
     else if(command === "help"){
         const Embed = new Discord.MessageEmbed()
         .setColor("#ddbec3")
-        .addTitle("help menu idk")
+        .setTitle("help menu idk man")
         .addField("segs horny", `AWOOOOOOOOOOOOGA SEGGGGGGGGGGS`)
         .addField("segs ping", `this literally exists to lmk that my bot isnt ded`)
         .addField("segs user", `shows user info`)
