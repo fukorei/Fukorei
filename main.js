@@ -135,6 +135,7 @@ client.on("messageCreate",message=>{
     else if(command === "help"){
         const Embed = new Discord.MessageEmbed()
         .setColor("#ddbec3")
+        .addTitle("help menu idk")
         .addField("segs horny", `AWOOOOOOOOOOOOGA SEGGGGGGGGGGS`)
         .addField("segs ping", `this literally exists to lmk that my bot isnt ded`)
         .addField("segs user", `shows user info`)
@@ -142,6 +143,7 @@ client.on("messageCreate",message=>{
         .addField("segs sadge", `sadge`)
         .addField("segs hasagi", `yasuo thong thao 7`)
         .addField("segs changelogs", `get access to the changelogs channel`)
+        .addField("segs le", `A very helpful command to make the bot send pictures of the amazing character "Fischl" from the game "Jenshin Impact"!`)
         message.channel.send({ embeds: [Embed] });
     }
 
