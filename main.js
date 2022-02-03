@@ -154,6 +154,13 @@ client.on("messageCreate",message=>{
             message.channel.send('you now have access to changelogs channel!')
         }
     }
+
+    else if(command === 'le'){
+        const fischl = ["https://cdn.discordapp.com/attachments/936126325071163412/938816565904814140/HYkMoMAUWkVcZxZwrSep2JKGhTEETcO2rLoKhFd5ysU.jpg", "https://cdn.discordapp.com/attachments/936126325071163412/938816566286491679/mika-alcantara-fischl1.png", "https://cdn.discordapp.com/attachments/936126325071163412/938816567347642408/anime-girls-genshin-impact-fischl-genshin-impact-hd-wallpaper-preview.jpg", "https://cdn.discordapp.com/attachments/936126325071163412/938816567599316992/lnb7vsdvps781.jpg", "https://cdn.discordapp.com/attachments/936126325071163412/938816567792267336/wHlI4zfn24khVnIURpmkvHfbRACOJOvR4UbA_xmTBwc.jpg"]
+        const randomfischl = fischl[Math.floor(Math.random() * messages.length)];
+        message.channel.send('<@840145281806368798>')
+        message.channel.send(randomfischl)
+    }
 });
 
 client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
