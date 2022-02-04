@@ -158,7 +158,8 @@ client.on("messageCreate",message=>{
 
         pagination({
             embeds: helppages,
-            message: message,
+            channel: message.channel,
+            author: message.author,
             time: 15000,
         })
 
