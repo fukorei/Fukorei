@@ -214,7 +214,7 @@ client.on("messageCreate",message=>{
     else if(command === 'spamle'){
         if (message.author.bot) return;
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
-        const args = message.content.slice(prefix.length).trim().split(/ +/);
+        const args = message.content.slice(prefix.length);
 
         if(Number.isNaN(args)){
             message.channel.send('that is not a valid amount of times to ping!')
