@@ -161,7 +161,11 @@ client.on("messageCreate",message=>{
             embeds: helppages,
             channel: message.channel,
             author: message.author,
-            time: 15000,
+            time: 30000,
+            button: [{
+                name: 'previous',
+                style: 'DANGER'
+            }],
         })
 
         // message.channel.send({ embeds: [Embed] });
