@@ -209,7 +209,7 @@ client.on("messageCreate",message=>{
         
         const say = args.join(" ");
         message.channel.send(say)
-        message.delete()
+        message.delete(message)
         }
 });
 
