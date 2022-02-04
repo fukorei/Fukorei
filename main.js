@@ -157,7 +157,7 @@ client.on("messageCreate",message=>{
         .setTitle("help menu idk man")
         .addField("segs changelogs", `get access to the changelogs channel`)
         .addField("segs le", `A very helpful command to make the bot send pictures of the amazing character "Fischl" from the game "Jenshin Impact"!`)
-        .addField("ghe v s, qua ghe gom, folontilo, emotional damage, kappa, ur mom", `<:kekw:805463070527717376>`)
+        .addField("ghe v s, qua ghe gom, folontilo, emotional damage, kappa, ur mom, i will send you to jesus", `<:kekw:805463070527717376>`)
 
         const helppages = [help1, help2];
 
