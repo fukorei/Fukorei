@@ -204,11 +204,12 @@ client.on("messageCreate",message=>{
         const user = message.author;
         
         if (!args[0]) {
-        user.send("what do you want me to say dumbass <:mikewhat:806372341629976586>")
+        message.channel.send("what do you want me to say dumbass <:mikewhat:806372341629976586>")
         }
-        message.delete()
+
         const say = args.join(" ");
         message.channel.send(say)
+        message.delete()
         }
 });
 
