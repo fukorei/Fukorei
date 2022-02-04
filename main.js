@@ -23,9 +23,9 @@ client.on('ready', () => {
 });
 
 client.on("messageCreate",message=>{
-    var blarr=["448296073346285595", "571911807749324810"];
+    var blarr=["448296073346285595"];
     if (blarr.includes(message.author.id)) return;
-    
+
     var ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
     if(ghevs.includes(message.content.toLowerCase())){
         message.channel.send('🪑👗⭐🤨')
@@ -67,7 +67,7 @@ client.on("messageCreate",message=>{
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    var blarr=["448296073346285595", "571911807749324810"];
+    var blarr=["448296073346285595"];
     if (blarr.includes(message.author.id)) return;
 
     else if(command === 'ping'){
