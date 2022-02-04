@@ -129,8 +129,20 @@ client.on("messageCreate",message=>{
         if (blarr.includes(message.author.id)){
             message.channel.send('');
         } else {
-            for(let i = 1; i<=5; i++){
-                message.channel.send('<@602146178636709888>')
+            if (message.author.bot) return;
+            if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")){
+                message.channel.send('mày làm gì có tuổi ping <:lul:806387931606024232>')
+            } else {
+            const args = message.content.slice(prefix.length).trim().split(/ +/);
+            console.log(args)
+    
+            if(Number.isNaN(+args[1])){
+                message.channel.send('that is not a valid amount of times to ping!')
+            } else {
+                for(let i = 0; i <= +args[1]; i++){
+                    message.channel.send('<@840145281806368798>')
+                }
+            }
             }
         }
     }
@@ -215,7 +227,7 @@ client.on("messageCreate",message=>{
         if (message.author.bot) return;
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")){
             message.channel.send('mày làm gì có tuổi ping <:lul:806387931606024232>')
-        }
+        } else {
         const args = message.content.slice(prefix.length).trim().split(/ +/);
         console.log(args)
 
@@ -225,6 +237,7 @@ client.on("messageCreate",message=>{
             for(let i = 0; i <= +args[1]; i++){
                 message.channel.send('<@840145281806368798>')
             }
+        }
         }
     }
 });
