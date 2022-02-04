@@ -192,6 +192,10 @@ client.on("messageCreate",message=>{
     else if(command === 'github'){
         message.channel.send('here is the bot repo on github where you can see exact changes:\nhttps://github.com/arizl/segs/commits/main')
     }
+
+    else if(command === 'đàm'){
+        message.channel.send('here lies an awesome sex dungeon waiting to be developed :D')
+    }
 });
 
 client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
