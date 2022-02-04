@@ -216,6 +216,7 @@ client.on("messageCreate",message=>{
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
         let msgArray = message.content.split(" ");
         let args = msgArray.slice(1);
+        console.log(args)
 
         if(Number.isNaN(+args)){
             message.channel.send('that is not a valid amount of times to ping!')
