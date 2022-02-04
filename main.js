@@ -200,7 +200,6 @@ client.on("messageCreate",message=>{
         if (message.author.bot) return;
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
         const args = message.content.slice(prefix.length).trim().split(/ +/);
-        const command = args.shift().toLowerCase();
         const user = message.author;
         
         if (!args[0]) {
@@ -210,7 +209,21 @@ client.on("messageCreate",message=>{
         const say = args.join(" ");
         message.channel.send(say)
         message.delete()
+    }
+
+    else if(command === 'spamle'){
+        if (message.author.bot) return;
+        if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
+        const args = message.content.slice(prefix.length).trim().split(/ +/);
+
+        if(Number.isNaN(args)){
+            message.channel.send('that is not a valid amount of times to ping!')
+        } else {
+            for(let i = 0; i < args; i++){
+                message.channel.send('<@840145281806368798>')
+            }
         }
+    }
 });
 
 client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
