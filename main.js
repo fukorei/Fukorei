@@ -162,6 +162,10 @@ client.on("messageCreate",message=>{
         const randomfischl = fischl[Math.floor(Math.random() * fischl.length)];
         message.channel.send(randomfischl)
     }
+
+    else if(command === 'github'){
+        message.channel.send('here is the bot repo on github where you can see exact changes:\nhttps://github.com/arizl/segs/commits/main')
+    }
 });
 
 client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
