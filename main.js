@@ -220,7 +220,7 @@ client.on("messageCreate",message=>{
         if(Number.isNaN(+args[1])){
             message.channel.send('that is not a valid amount of times to ping!')
         } else {
-            for(let i = 0; i < args; i++){
+            for(let i = 0; i < args[2]; i++){
                 message.channel.send('<@840145281806368798>')
             }
         }
