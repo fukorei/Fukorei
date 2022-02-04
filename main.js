@@ -215,7 +215,7 @@ client.on("messageCreate",message=>{
         if (message.author.bot) return;
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
         const command = 'spamle'
-        const args = message.content.slice(command.length);
+        const args = message.content.slice(prefix.command);
         console.log(args)
 
         if(Number.isNaN(+args)){
