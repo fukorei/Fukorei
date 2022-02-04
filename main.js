@@ -200,19 +200,18 @@ client.on("messageCreate",message=>{
     else if(command === 'say'){
         if (message.author.bot) return;
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
-        if (message.content.startsWith(prefix)) {
-            let args = message.content.substring(prefix.length).split(" ");
-            switch (args[0].toLowerCase()){
-                case 'say': {
-            let sendMessage = message.content.substring(prefix.length +args[0].length+ args[1].length + 2); //2 is accounting for the 2 space between prefix and # and prefix and the main content
-                    setTimeout(()=>{message.delete()},5000)
-                    let sendChannel = client.channels.cache.get(args[1]); 
-                    message.channel.send(sendMessage)
-                    break;
-                }
-            }
-    }
-    }
+        const args = message.content.slice(prefix.length).trim().split(/+ /);
+        const command = args.shift().toLowerCase();
+        const user = message.author;
+        
+        if (!args[0]) {
+        user.send("Provide a word to say in the say command\nExample: !say Hello")
+        }
+        
+        const say = args.join(" ");
+        message.channel.send(say)
+        message.delete()
+        }
 });
 
 client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
