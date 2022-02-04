@@ -147,12 +147,13 @@ client.on("messageCreate",message=>{
         .addField("segs spamqa", `spam ping the fuck out of that mf`)
         .addField("segs sadge", `sadge`)
         .addField("segs hasagi", `yasuo thong thao 7`)
-        .addField("segs changelogs", `get access to the changelogs channel`)
-        .addField("segs le", `A very helpful command to make the bot send pictures of the amazing character "Fischl" from the game "Jenshin Impact"!`)
 
         const help2 = new Discord.MessageEmbed()
         .setColor("#ddbec3")
         .setTitle("help menu idk man")
+        .addField("segs changelogs", `get access to the changelogs channel`)
+        .addField("segs le", `A very helpful command to make the bot send pictures of the amazing character "Fischl" from the game "Jenshin Impact"!`)
+        .addField("ghe v s, qua ghe gom, folontilo, emotional damage, kappa, ur mom", `<:kekw:805463070527717376>`)
 
         const helppages = [help1, help2];
 
