@@ -157,7 +157,7 @@ client.on("messageCreate",message=>{
         .setTitle("help menu idk man")
         .addField("segs changelogs", `get access to the changelogs channel`)
         .addField("segs le", `A very helpful command to make the bot send pictures of the amazing character "Fischl" from the game "Jenshin Impact"!`)
-        .addField("ghe v s, qua ghe gom, folontilo, emotional damage, kappa, ur mom, i will send you to jesus", `<:kekw:805463070527717376>`)
+        .addField("ghe v s, ghe v dok, qua ghe gom, folontilo, emotional damage, kappa, ur mom, i will send you to jesus", `<:kekw:805463070527717376>`)
 
         const helppages = [help1, help2];
 
@@ -195,6 +195,23 @@ client.on("messageCreate",message=>{
 
     else if(command === 'đàm'){
         message.channel.send('here lies an awesome sex dungeon waiting to be developed :D')
+    }
+
+    else if(command === 'say'){
+        if (message.author.bot) return;
+        if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
+        if (message.content.startsWith(prefix)) {
+            let args = message.content.substring(prefix.length).split(" ");
+            switch (args[0].toLowerCase()){
+                case 'say': {
+            let sendMessage = message.content.substring(prefix.length +args[0].length+ args[1].length + 2); //2 is accounting for the 2 space between prefix and # and prefix and the main content
+                    setTimeout(()=>{message.delete()},5000)
+                    let sendChannel = client.channels.cache.get(args[1]); 
+                    sendChannel.send(sendMessage)
+                    break;
+                }
+            }
+    }
     }
 });
 
