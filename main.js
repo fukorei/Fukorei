@@ -162,13 +162,11 @@ client.on("messageCreate",message=>{
             channel: message.channel,
             author: message.author,
             time: 30000,
-            button: [{
-                name: 'previous',
-                style: 'DANGER'
-            }],
+            // button: [{
+            //     name: 'previous',
+            //     style: 'DANGER'
+            // }],
         })
-
-        // message.channel.send({ embeds: [Embed] });
     }
 
     else if(command === 'changelogs'){
