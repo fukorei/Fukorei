@@ -215,7 +215,7 @@ client.on("messageCreate",message=>{
         const args = message.content.slice(prefix.length).trim().split(/ +/);
         const user = message.author;
         
-        if (!args[0]) {
+        if (!args[1]) {
         message.channel.send("what do you want me to say dumbass <:mikewhat:806372341629976586>")
         }
 
