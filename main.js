@@ -213,7 +213,9 @@ client.on("messageCreate",message=>{
 
     else if(command === 'spamle'){
         if (message.author.bot) return;
-        if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
+        if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")){
+            message.channel.send('mày làm gì có tuổi ping <:lul:806387931606024232>')
+        }
         const args = message.content.slice(prefix.length).trim().split(/ +/);
         console.log(args)
 
