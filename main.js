@@ -5,7 +5,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const prefix ='segs ';
 const fs = require('fs');
 const { MessageEmbed } = require('discord.js');
-const { pagination } = require('reconlx ')
+const { pagination } = require('reconlx')
 
 
 
