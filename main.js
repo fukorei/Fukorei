@@ -54,6 +54,10 @@ client.on("messageCreate",message=>{
     else if(message.content.toLowerCase() === 'emotional damage'){
         message.channel.send("https://cdn.discordapp.com/attachments/939008225766948874/939008413382357122/Emotional_Damage.mp4")
     }
+
+    else if(message.content.toLowerCase() === 'i will send you to jesus'){
+        message.channel.send('https://cdn.discordapp.com/attachments/939008225766948874/939018214451593246/2.mp4')
+    }
 }); 
 
 client.on("messageCreate",message=>{
