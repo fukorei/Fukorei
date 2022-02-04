@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^13.6.0",
-    "discord-reply": "0.1.2"
+    "discord-reply": "0.1.2",
+    "mongoose": "^5.13.2",
+    "reconlx": "^2.0.1"
   },
   "engines": {
     "node": "16.6"

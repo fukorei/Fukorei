@@ -5,6 +5,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const prefix ='segs ';
 const fs = require('fs');
 const { MessageEmbed } = require('discord.js');
+const { pagination } = require('reconlx ')
 
 
 
@@ -137,7 +138,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === "help"){
-        const Embed = new Discord.MessageEmbed()
+        const help1 = new Discord.MessageEmbed()
         .setColor("#ddbec3")
         .setTitle("help menu idk man")
         .addField("segs horny", `AWOOOOOOOOOOOOGA SEGGGGGGGGGGS`)
@@ -148,7 +149,20 @@ client.on("messageCreate",message=>{
         .addField("segs hasagi", `yasuo thong thao 7`)
         .addField("segs changelogs", `get access to the changelogs channel`)
         .addField("segs le", `A very helpful command to make the bot send pictures of the amazing character "Fischl" from the game "Jenshin Impact"!`)
-        message.channel.send({ embeds: [Embed] });
+
+        const help2 = new Discord.MessageEmbed()
+        .setColor("#ddbec3")
+        .setTitle("help menu idk man")
+
+        const helppages = [help1, help2];
+
+        pagination({
+            embeds: helppages,
+            message: message,
+            time: 15000,
+        })
+
+        // message.channel.send({ embeds: [Embed] });
     }
 
     else if(command === 'changelogs'){
