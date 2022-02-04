@@ -207,7 +207,7 @@ client.on("messageCreate",message=>{
             let sendMessage = message.content.substring(prefix.length +args[0].length+ args[1].length + 2); //2 is accounting for the 2 space between prefix and # and prefix and the main content
                     setTimeout(()=>{message.delete()},5000)
                     let sendChannel = client.channels.cache.get(args[1]); 
-                    sendChannel.send(sendMessage)
+                    message.channel.send(sendMessage)
                     break;
                 }
             }
