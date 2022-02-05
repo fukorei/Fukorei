@@ -60,6 +60,10 @@ client.on("messageCreate",message=>{
     else if(message.content.toLowerCase() === 'i will send you to jesus'){
         message.channel.send('https://cdn.discordapp.com/attachments/939008225766948874/939018214451593246/2.mp4')
     }
+
+    else if(message.content.toLowerCase() === 'sóng bắt đầu từ gió'){
+        message.channel.send('gió bắt đầu từ q\nkhi nào hasagi\nthì ta phải trăn trối\nnếu pha đó có lỗi\nphải tốc biến chạy ngay\nctrl 6 liền tay\n da xua thông thạo 7')
+    }
 }); 
 
 client.on("messageCreate",message=>{
