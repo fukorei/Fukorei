@@ -213,15 +213,14 @@ client.on("messageCreate",message=>{
         if (message.author.bot) return;
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
         const args = message.content.slice(prefix.length).trim().split(/ +/);
-        const user = message.author;
-        
+        args.shift()        
         if (!args[1]) {
         message.channel.send("what do you want me to say dumbass <:mikewhat:806372341629976586>")
-        }
-
+        } else {
         const say = args.join(" ");
         message.channel.send(say)
         message.delete()
+        }
     }
 
     else if(command === 'spamle'){
