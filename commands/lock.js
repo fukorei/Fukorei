@@ -1,37 +1,21 @@
 const Discord = require('discord.js');
-const { Permissions } = require('discord.js');
 
 module.exports = {
     name: 'lock',
     description: 'Locks the specified channel!',
     execute(message, args, channel) {
-        if (!message.member.hasPermissions('ADMINISTRATOR'))
-            return message.reply('<:nomark:791577754659192832> You dont have the necessary permissions to use this command!');
-        if (!args[0])
-            return message.reply('<:nomark:791577754659192832> You need to mention a channel!');
-        if (!message.mentions.channels.first())
-            return message.reply('<:nomark:791577754659192832> You need to mention VALID a channel!');
+        const role = message.guild.roles.cache.find(r => r.name === '@everyone')
+        let channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
+        if (!channel) channel = message.channel;
 
-        const role = member.roles.cache.some(role => role.name === "@everyone");
-        if (!role) return message.channel.send('Role is not able to be found.')
-
-        message.mentions.channels.forEach(channel => {
-            if (channel.name.startsWith("🔒"))
-                return message.channel.send(`<#${channel.id}> is already locked!`)
-            channel.setName(`🔒${channel.name}`);
-            try {
-                channel.permissionOverwrites(role, {
-                    SEND_MESSAGES: false
-                });
-                message.channel.send(`<#${channel.id}> has been locked!`);
-            } catch (err) {
-                console.log(err);
-                message.channel.send(`Something has went wrong when locking the channels.`);
-            }
-        })
-
-        channel.updateOverwrite(message.author, {
-            SEND_MESSAGES: false
-        })
+        if(!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) {
+            return message.channel.send('m tuổi gì mà đòi lock?');
+        }
+        else if (channel.permissionsFor(message.guild.id).has('SEND_MESSAGES') === false){
+            return message.channel.send(`${channel} is already locked!`);
+        }
+        
+        channel.permissionOverwrites.edit(role, { SEND_MESSAGES: false}).catch(() => { })
+        message.channel.send(`djt me chúng mày im tất hộ bố`)
     }
 }
