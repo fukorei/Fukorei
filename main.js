@@ -218,9 +218,9 @@ client.on("messageCreate",message=>{
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
         const args = message.content.slice(prefix.length).trim().split(/ +/);
         args.shift()        
-        if (!args[0]) {
+        if (!args[1]) {
         message.channel.send("what do you want me to say dumbass <:mikewhat:806372341629976586>")
-        };
+        }
         const say = args.join(" ");
         message.channel.send(say)
         message.delete()
