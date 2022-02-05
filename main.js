@@ -216,16 +216,10 @@ client.on("messageCreate",message=>{
     else if(command === 'say'){
         if (message.author.bot) return;
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
-        const args = message.content.slice(prefix.length).trim().split(/ +/);
-        console.log(args)
-        args.shift()
+        const [command, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
 
-        if (!args[0]) {
-        message.channel.send("what do you want me to say dumbass <:mikewhat:806372341629976586>")
-        }
-
-        const say = args.join(" ");
-        message.channel.send(say)
+        if(!arg.length) return message.channel.send("what do you want me to say <:mikewhat:806372341629976586>");
+        message.channel.send(args.join(" "));
         message.delete()
     }
 
