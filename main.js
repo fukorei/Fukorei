@@ -62,7 +62,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(message.content.toLowerCase() === 'sóng bắt đầu từ gió'){
-        message.channel.send('gió bắt đầu từ q\nkhi nào hasagi\nthì ta phải trăn trối\nnếu pha đó có lỗi\nphải tốc biến chạy ngay\nctrl 6 liền tay\n da xua thông thạo 7')
+        message.channel.send('gió bắt đầu từ q\nkhi nào hasagi\nthì ta phải trăn trối\nnếu pha đó có lỗi\nphải tốc biến chạy ngay\nctrl 6 liền tay\nda xua thông thạo 7')
     }
 }); 
 
