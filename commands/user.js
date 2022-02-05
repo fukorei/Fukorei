@@ -13,6 +13,5 @@ module.exports = {
         .addField("User ID:", `${message.author?.id}`)
         .addField("Created At:", `${message.author?.createdAt}`)
         message.channel.send({ embeds: [Embed] });
-        console.log(message.channel)
     }
 };

@@ -84,7 +84,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'lock'){
-        client.commands.get('lock').execute(message, args);
+        client.commands.get('lock').execute(client, message, args);
     }
 
 
