@@ -124,7 +124,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'github'){
-        message.channel.send('here is the bot repo on github where you can see exact changes:\nhttps://github.com/arizl/segs/commits/main')
+        client.commands.get('github').execute(client, message, args);
     }
 
     else if(command === 'đàm'){
