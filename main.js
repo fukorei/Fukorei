@@ -87,18 +87,8 @@ client.on("messageCreate",message=>{
         client.commands.get('lock').execute(client, message, args);
     }
 
-
     else if(command === 'unlock'){
-        const role = message.guild.roles.cache.find(r => r.name === '@everyone')
-        let channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
-        if (!channel) channel = message.channel;
-
-        if (channel.permissionsFor(message.guild.id).has('SEND_MESSAGES') === true){
-            return message.channel.send(`mở rồi con gà`);
-        }
-        
-        channel.permissionOverwrites.edit(role, { SEND_MESSAGES: true}).catch(() => { })
-        message.channel.send(`sủa đi mấy con gà con`)
+        client.commands.get('unlock').execute(client, message, args);
     }
 
     else if(command === 'prefix'){
@@ -118,21 +108,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'spamqa'){
-            if (message.author.bot) return;
-            if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")){
-                message.channel.send('mày làm gì có tuổi ping <:lul:806387931606024232>')
-            } else {
-            const args = message.content.slice(prefix.length).trim().split(/ +/);
-            console.log(args)
-    
-            if(Number.isNaN(+args[1])){
-                message.channel.send('that is not a valid amount of times to ping!')
-            } else {
-                for(let i = 0; i < +args[1]; i++){
-                    message.channel.send('<@602146178636709888>')
-                }
-            }
-        }
+        client.commands.get('spamqa').execute(client, message, args);
     }
         
 
