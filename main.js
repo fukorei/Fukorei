@@ -24,7 +24,7 @@ client.on('ready', () => {
 });
 
 client.on("messageCreate",message=>{
-    var blarr=["448296073346285595"];
+    var blarr=["606409312411058176"];
     if (blarr.includes(message.author.id)) return;
 
     var ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
@@ -72,7 +72,7 @@ client.on("messageCreate",message=>{
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    var blarr=["448296073346285595"];
+    var blarr=["606409312411058176"];
     if (blarr.includes(message.author.id)) return;
 
     else if(command === 'ping'){
