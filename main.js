@@ -80,13 +80,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'user'){
-        const Embed = new Discord.MessageEmbed()
-        .setColor("#ddbec3")
-        // .setAvatar(message.author.displayAvatarURL())
-        .addField("Username:", `${message.author.username}#${message.author.discriminator}`)
-        .addField("User ID:", `${message.author.id}`)
-        .addField("Created At:", `${message.author.createdAt}`)
-        message.channel.send({ embeds: [Embed] });
+        client.commands.get('user').execute(message, args);
     }
 
     else if(command === 'lock'){
