@@ -125,9 +125,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'le'){
-        const fischl = ["<@840145281806368798> https://cdn.discordapp.com/attachments/936126325071163412/938816565904814140/HYkMoMAUWkVcZxZwrSep2JKGhTEETcO2rLoKhFd5ysU.jpg", "<@840145281806368798> https://cdn.discordapp.com/attachments/936126325071163412/938816566286491679/mika-alcantara-fischl1.png", "<@840145281806368798> https://cdn.discordapp.com/attachments/936126325071163412/938816567347642408/anime-girls-genshin-impact-fischl-genshin-impact-hd-wallpaper-preview.jpg", "<@840145281806368798> https://cdn.discordapp.com/attachments/936126325071163412/938816567599316992/lnb7vsdvps781.jpg", "<@840145281806368798> https://cdn.discordapp.com/attachments/936126325071163412/938816567792267336/wHlI4zfn24khVnIURpmkvHfbRACOJOvR4UbA_xmTBwc.jpg", "<@840145281806368798> https://cdn.discordapp.com/attachments/936126325071163412/938817306388201532/illust_85262679_20220203_221436.jpg", "<@840145281806368798> https://cdn.discordapp.com/attachments/936126325071163412/938817307189321738/illust_90080364_20220203_221524.jpg", "<@840145281806368798> https://cdn.discordapp.com/attachments/936126325071163412/938817307847831582/illust_84945467_20220203_221548.png", "<@840145281806368798> https://cdn.discordapp.com/attachments/936126325071163412/938817354777915432/illust_85010765_20220203_221541.jpg"]
-        const randomfischl = fischl[Math.floor(Math.random() * fischl.length)];
-        message.channel.send(randomfischl)
+        client.commands.get('fischl').execute(client, message, args);
     }
 
     else if(command === 'github'){
@@ -139,13 +137,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'say'){
-        if (message.author.bot) return;
-        if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
-        const [command, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
-
-        if(!args.length) return message.channel.send("what do you want me to say <:mikewhat:806372341629976586>");
-        message.channel.send(args.join(" "));
-        message.delete()
+        client.commands.get('say').execute(client,message,args);
     }
 
     else if(command === 'spamle'){
