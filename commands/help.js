@@ -5,7 +5,7 @@ const { pagination } = require('reconlx')
 module.exports = {
     name: "help",
     description: "help menu",
-    execute(message,args){
+    execute(client, message, args){
         const help1 = new Discord.MessageEmbed()
         .setColor("#ddbec3")
         .setTitle("help menu idk man")
