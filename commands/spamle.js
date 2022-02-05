@@ -6,13 +6,11 @@ module.exports = {
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")){
             message.channel.send('mày làm gì có tuổi ping <:lul:806387931606024232>')
         } else {
-        console.log(args)
-        args.shift()
 
-        if(Number.isNaN(+args)){
+        if(Number.isNaN(+args[0])){
             message.channel.send('that is not a valid amount of times to ping!')
         } else {
-            for(let i = 0; i < +args; i++){
+            for(let i = 0; i < +args[0]; i++){
                 message.channel.send('<@840145281806368798>')
             }
         }
