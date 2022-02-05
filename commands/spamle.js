@@ -4,7 +4,7 @@ module.exports = {
     execute(client,message,args,prefix){
         if (message.author.bot) return;
         var le = ["840145281806368798"]
-        if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR" || !le.includes(message.author.id))){
+        if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR") || !le.includes(message.author.id)){
             message.channel.send('mày làm gì có tuổi ping <:lul:806387931606024232>')
         } else {
 
