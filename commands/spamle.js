@@ -3,8 +3,8 @@ module.exports = {
     description: "help menu",
     execute(client,message,args,prefix){
         if (message.author.bot) return;
-        var le = ["840145281806368798"]
-        if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR") || !le.includes(message.author.id)){
+        var allowedids = ["840145281806368798","732043268946133133","480288826187710464"]
+        if (allowedids.includes(message.author.id)){
             message.channel.send('mày làm gì có tuổi ping <:lul:806387931606024232>')
         } else {
 
