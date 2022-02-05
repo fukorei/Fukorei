@@ -229,11 +229,12 @@ client.on("messageCreate",message=>{
         } else {
         const args = message.content.slice(prefix.length).trim().split(/ +/);
         console.log(args)
+        args.shift()
 
-        if(Number.isNaN(+args[1])){
+        if(Number.isNaN(+args)){
             message.channel.send('that is not a valid amount of times to ping!')
         } else {
-            for(let i = 0; i < +args[1]; i++){
+            for(let i = 0; i < +args; i++){
                 message.channel.send('<@840145281806368798>')
             }
         }
