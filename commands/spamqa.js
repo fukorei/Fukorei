@@ -10,10 +10,10 @@ module.exports = {
             } else {
             console.log(args)
     
-            if(Number.isNaN(+args[1])){
+            if(Number.isNaN(+args[0])){
                 message.channel.send('that is not a valid amount of times to ping!')
             } else {
-                for(let i = 0; i < +args[1]; i++){
+                for(let i = 0; i < +args[0]; i++){
                     message.channel.send('<@602146178636709888>')
                 }
             }
