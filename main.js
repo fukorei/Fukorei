@@ -220,10 +220,10 @@ client.on("messageCreate",message=>{
         console.log(args)
         args.shift()
 
-        if (!args[0]) {
+        if (args[0] === 'say') {
         message.channel.send("what do you want me to say dumbass <:mikewhat:806372341629976586>")
         }
-        
+
         const say = args.join(" ");
         message.channel.send(say)
         message.delete()
