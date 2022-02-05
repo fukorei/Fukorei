@@ -80,7 +80,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'user'){
-        client.commands.get('user').execute(message, args, channel);
+        client.commands.get('user').execute(message, args);
     }
 
     else if(command === 'lock'){
