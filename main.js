@@ -103,15 +103,10 @@ client.on("messageCreate",message=>{
         message.channel.send('UUUUUUUUWWWWWWWWWWOOOOOOOOOOOOOOOOOOGAAAAAJHGASJDHGASJHGDSSSSSSSSSSSSSSSSEEEEEEEEEEEEEEEEEEEEEEEEEEEGGGGGGGGGGGGGGGGGGGGGGGSSSSSSSSSSSSSSSSSSS');
     }
 
-    else if(command === 'qa'){
-        message.channel.send('<@602146178636709888>')
-    }
-
     else if(command === 'spamqa'){
         client.commands.get('spamqa').execute(client, message, args, prefix);
     }
         
-
     else if(command === 'sadge'){
         message.channel.send('<:pepe_sadge:929713686615052298>')
     }
@@ -133,7 +128,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'đàm'){
-        message.channel.send('here lies an awesome sex dungeon waiting to be developed :D')
+        client.commands.get('dam').execute(client,message,args);
     }
 
     else if(command === 'say'){
