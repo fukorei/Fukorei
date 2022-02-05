@@ -5,6 +5,7 @@ const prefix ='segs ';
 const fs = require('fs');
 const { MessageEmbed } = require('discord.js');
 const { pagination } = require('reconlx')
+require("dotenv/config");
 
 
 
@@ -243,4 +244,4 @@ client.on("messageCreate",message=>{
     }
 });
 
-client.login('OTM0NzkzNTE1MTY5Mzc0MjQ5.Ye1QTQ.tcj1aeQMaOecpR2Fsc5XmSLsJKw');
+client.login(process.env.BOT_TOKEN)
