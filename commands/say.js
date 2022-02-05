@@ -1,6 +1,6 @@
 module.exports = {
-    name: "help",
-    description: "help menu",
+    name: "say",
+    description: "say a message",
     execute(client,message,args){
         if (message.author.bot) return;
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
