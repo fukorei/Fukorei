@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
     name: "spamqa",
     description: "spam that mf",
-    execute(client, message, args){
+    execute(client, message, args, prefix){
         if (message.author.bot) return;
             if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")){
                 message.channel.send('mày làm gì có tuổi ping <:lul:806387931606024232>')
