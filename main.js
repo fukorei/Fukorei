@@ -218,7 +218,7 @@ client.on("messageCreate",message=>{
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
         const [command, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
 
-        if(!arg.length) return message.channel.send("what do you want me to say <:mikewhat:806372341629976586>");
+        if(!args.length) return message.channel.send("what do you want me to say <:mikewhat:806372341629976586>");
         message.channel.send(args.join(" "));
         message.delete()
     }
