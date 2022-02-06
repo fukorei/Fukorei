@@ -68,12 +68,12 @@ client.on('ready', () => {
 // }); 
 
 client.on("messageCreate",message=>{
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
     if(message.author.bot) return;
     if(!message.content.toLowerCase().startsWith(prefix)){
         client.commands.get('cmdswithoutprfx').execute(client, message, args);
     } else {
-    const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
 
     var blarr=["606409312411058176"];
     if (blarr.includes(message.author.id)) return;
