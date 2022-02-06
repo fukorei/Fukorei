@@ -8,7 +8,7 @@ module.exports = {
         
         let total = 0;
         let cSymbol = "+"
-        args.foreach(index => {
+        args.forEach(index => {
           if(!isNan(index)){
             switch(cSymbol){
               case "+":{
