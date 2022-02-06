@@ -12,6 +12,7 @@ module.exports = {
           if(!Number.isNaN(index)){
             switch(cSymbol){
               case "+":{
+                console.log(Number(index));
                 total += Number(index)
                 break;
               }
