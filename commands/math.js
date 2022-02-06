@@ -10,7 +10,7 @@ module.exports = {
         let cSymbol = "+"
         console.log(args)
 
-        if(args[0].isNaN || !args[0]){
+        if(Number.isNaN(+args[0]) || !args[0]){
           return message.channel.send('wrong argument (must be a number)')
         } else {
         args.forEach(index => {
