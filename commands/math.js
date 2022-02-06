@@ -17,6 +17,21 @@ module.exports = {
                 total += Number(index)
                 break;
               }
+
+              case "-":{
+                total -= Number(index)
+                break;
+              }
+
+              case "/":{
+                total /= Number(index)
+                break;
+              }
+
+              case "*":{
+                total *= Number(index)
+                break;
+              }
             }
           }
           if(symbols.includes(index)) cSymbol = index;
