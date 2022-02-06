@@ -19,7 +19,7 @@ module.exports = {
           }
           if(symbols.includes(index)) cSymbol = index;
         })
-
+        console.log(total)
         return message.channel.send(total)
     }
 }
