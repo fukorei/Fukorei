@@ -7,6 +7,7 @@ module.exports = {
         if(Number.isNaN(+args[0]) || Number.isNaN(+args[2])){
             return message.channel.send('numbers and signs must be seperated!')
         } else{
+            const maths
             switch (maths){
                 case plus: 
                 if(!args[1] === "+") return;
