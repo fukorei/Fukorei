@@ -69,7 +69,7 @@ client.on('ready', () => {
 
 client.on("messageCreate",message=>{
     if(message.author.bot) return;
-    if(!message.content.toLowerCase.startsWith(prefix)){
+    if(!message.content.toLowerCase().startsWith(prefix)){
         client.commands.get('cmdswithoutprfx').execute(client, message, args);
     } else {
     const args = message.content.slice(prefix.length).split(/ +/);
