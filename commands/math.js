@@ -9,6 +9,10 @@ module.exports = {
         let total = 0;
         let cSymbol = "+"
         console.log(args)
+
+        if(args[0].isNaN || !args[0]){
+          return message.channel.send('wrong argument (must be a number)')
+        } else {
         args.forEach(index => {
           if(!isNaN(index)){
             switch(cSymbol){
@@ -36,6 +40,7 @@ module.exports = {
           }
           if(symbols.includes(index)) cSymbol = index;
         })
+        }
         console.log(total)
         return message.channel.send(`${total}`)
     }
