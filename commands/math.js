@@ -8,6 +8,7 @@ module.exports = {
         
         let total = 0;
         let cSymbol = "+"
+        console.log(args)
         args.forEach(index => {
           if(!isNaN(index)){
             switch(cSymbol){
