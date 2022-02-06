@@ -138,6 +138,10 @@ client.on("messageCreate",message=>{
     else if(command === 'spamle'){
         client.commands.get('spamle').execute(client, message, args, prefix);
     }
+
+    else if(command === 'maths'){
+        client.commands.get('maths').execute(client, message, args, prefix);
+    }
 });
 
 client.login(process.env.DISCORD_BOT_TOKEN)

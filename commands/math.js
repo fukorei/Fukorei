@@ -10,7 +10,9 @@ module.exports = {
             switch (maths){
                 case plus: if(!args[1] === "+") continue;
                 if(args[1] === "+"){
-                    message.channel.send(+args[0] + +args[2])
+                    const result = +args[0] + +args[2]
+                    console.log(result)
+                    message.channel.send(result)
                 }
             }
         }
