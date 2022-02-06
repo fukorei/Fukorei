@@ -9,7 +9,7 @@ module.exports = {
         let total = 0;
         let cSymbol = "+"
         args.forEach(index => {
-          if(!Number.isNaN(index)){
+          if(!isNaN(index)){
             switch(cSymbol){
               case "+":{
                 console.log(Number(index));
