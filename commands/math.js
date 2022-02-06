@@ -8,7 +8,8 @@ module.exports = {
             return message.channel.send('numbers and signs must be seperated!')
         } else{
             switch (maths){
-                case plus: if(!args[1] === "+") continue;
+                case plus: 
+                if(!args[1] === "+") return;
                 if(args[1] === "+"){
                     const result = +args[0] + +args[2]
                     console.log(result)
