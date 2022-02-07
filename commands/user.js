@@ -5,7 +5,6 @@ module.exports = {
     name: "user",
     description: "User info",
     execute(client, message, args){
-        console.log(message.author)
         const Embed = new Discord.MessageEmbed()
         .setColor("#ddbec3")
         // .setAvatar(message.author.displayAvatarURL())
