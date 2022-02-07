@@ -45,5 +45,10 @@ module.exports = {
             args.shift()
             client.commands.get('maths').execute(client, message, args);
         }
+
+        var sus = ["sú", "sus"]
+        if(sus.includes(message.content.toLowerCase())){
+            message.channel.send('ඞ')
+        }
     }
 }

@@ -14,7 +14,8 @@
     "discord-reply": "0.1.2",
     "mongoose": "^5.13.2",
     "reconlx": "^2.0.1",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "moment": "^2.29.1"
   },
   "engines": {
     "node": "16.6"
