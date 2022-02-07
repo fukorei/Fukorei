@@ -1,4 +1,4 @@
-const { afk } = require('../commands/afk');
+const { afk } = require('../collection');
 const client = require('../index')
 const moment = require('moment');
 
