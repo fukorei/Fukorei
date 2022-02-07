@@ -1,8 +1,6 @@
 const { Collection } = require('discord.js');
 const { afk } = require("../collection");
 
-const afk = new Collection();
-
 module.exports = {
     name: 'afk',
     execute(client, message, args) {

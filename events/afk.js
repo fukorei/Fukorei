@@ -1,8 +1,8 @@
 const { afk } = require('../collection');
-const client = require('../index')
+const client = require('../collection/index')
 const moment = require('moment');
 
-client.on("message", message => {
+client.on("messageCreate",message => {
         if(!message.guild || message.author.bot) return;
 
         const mentionedmember = message.mentions.members.first();
