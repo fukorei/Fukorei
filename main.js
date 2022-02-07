@@ -103,6 +103,10 @@ client.on("messageCreate",message=>{
     else if(command === 'maths'){
         client.commands.get('maths').execute(client, message, args, prefix);
     }
+
+    else if(command === 'afk'){
+        client.commands.get('afk').execute(client, message, args,);
+    }
 }
 });
 
