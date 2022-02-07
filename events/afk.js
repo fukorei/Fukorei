@@ -1,5 +1,5 @@
 const { afk } = require('../collection');
-const client = require('../collection/index')
+const client = require('main.js');
 const moment = require('moment');
 
 client.on("messageCreate",message => {
