@@ -7,7 +7,7 @@ module.exports = {
     execute(client, message, args) {
         if(!message.guild || message.author.bot) return;
 
-        const mentionedmember = message.mentions.member.first();
+        const mentionedmember = message.mentions.members.first();
         if(mentionedmember){
             const data = afk.get(mentionedmember.id);
 
