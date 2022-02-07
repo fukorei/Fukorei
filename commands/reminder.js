@@ -1,8 +1,6 @@
-const {ms} = require('ms.js');
-
 module.exports = {
     name: 'reminder',
-    execute(client, message, args) {
+    execute(client, message, args, ms) {
         if (!args) {
             message.reply("add an amount of time!")
         } else {
