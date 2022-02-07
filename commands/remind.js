@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'reminder',
+    name: 'remind',
     execute(client, message, args, ms) {
         if (!args) {
             message.reply("add an amount of time!")
