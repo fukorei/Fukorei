@@ -15,7 +15,7 @@ module.exports = {
                 message.reply('listen man im hosted on heroku stop tf is wrong with you <:mikewhat:806372341629976586> ')
             } else {
             for(let i = 0; i < +args[0]; i++){
-                message.reply('<@840145281806368798>')
+                message.channel.send('<@840145281806368798>')
             }
         }
     }
