@@ -10,10 +10,10 @@ module.exports = {
         if (!channel) channel = message.channel;
 
         if (channel.permissionsFor(message.guild.id).has('SEND_MESSAGES') === true){
-            return message.channel.send(`mở rồi con gà`);
+            return message.reply(`mở rồi con gà`);
         }
         
         channel.permissionOverwrites.edit(role, { SEND_MESSAGES: true}).catch(() => { })
-        message.channel.send(`sủa đi mấy con gà con`)
+        message.reply(`sủa đi mấy con gà con`)
     }
 }

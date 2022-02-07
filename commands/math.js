@@ -11,11 +11,11 @@ module.exports = {
         console.log(args)
 
         if (!args[0]){
-          return message.channel.send('missing arguments! (remember to seperate your numbers and symbols! ex: 1 + 1)');
+          return message.reply('missing arguments! (remember to seperate your numbers and symbols! ex: 1 + 1)');
         } 
         
         if (Number.isNaN(+args[0])){
-          return message.channel.send('wrong arguments! (must be a number)');
+          return message.reply('wrong arguments! (must be a number)');
         } 
         
         args.forEach(index => {
@@ -46,6 +46,6 @@ module.exports = {
           if(symbols.includes(index)) cSymbol = index;
         })
         console.log(total)
-        return message.channel.send(`${total}`)
+        return message.reply(`${total}`)
 }
 }

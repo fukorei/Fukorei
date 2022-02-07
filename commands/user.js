@@ -12,6 +12,6 @@ module.exports = {
         .addField("Username:", `${message.author?.username}#${message.author?.discriminator}`)
         .addField("User ID:", `${message.author?.id}`)
         .addField("Created At:", `${message.author?.createdAt}`)
-        message.channel.send({ embeds: [Embed] });
+        message.reply({ embeds: [Embed] });
     }
 };

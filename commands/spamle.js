@@ -5,17 +5,17 @@ module.exports = {
         if (message.author.bot) return;
         var allowedids = ["840145281806368798","732043268946133133","480288826187710464"]
         if (!allowedids.includes(message.author.id)){
-            message.channel.send('mày làm gì có tuổi ping <:lul:806387931606024232>')
+            message.reply('mày làm gì có tuổi ping <:lul:806387931606024232>')
         } else {
 
         if(Number.isNaN(+args[0])){
-            message.channel.send('that is not a valid amount of times to ping!')
+            message.reply('that is not a valid amount of times to ping!')
         } else {
             if (+args[0] >= 25){
-                message.channel.send('listen man im hosted on heroku stop tf is wrong with you <:mikewhat:806372341629976586> ')
+                message.reply('listen man im hosted on heroku stop tf is wrong with you <:mikewhat:806372341629976586> ')
             } else {
             for(let i = 0; i < +args[0]; i++){
-                message.channel.send('<@840145281806368798>')
+                message.reply('<@840145281806368798>')
             }
         }
     }
