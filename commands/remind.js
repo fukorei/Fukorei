@@ -9,7 +9,7 @@ module.exports = {
         message.reply(`i will remind you in ${args[0]}: ${reason}!`)
         setTimeout(() => {
             message.channel.send(`<@${message.author.id}> your reminder for ${reason}!`);
-        }, ms(args[0]))
+        }, ms(`${args[0]}`)
     }
     }
 }
