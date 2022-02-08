@@ -5,7 +5,7 @@ const prefix ='segs ';
 const fs = require('fs');
 const { MessageEmbed } = require('discord.js');
 const { pagination } = require('reconlx')
-const { ms } = require('ms');
+const { ms } = require('ms.js');
 require("dotenv/config");
 
 
