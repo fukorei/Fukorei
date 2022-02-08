@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'remind',
+    name: 'scrapremind',
     description: 'remind an user sth',
     execute(client, message, args) {
         //["time", "reason", "loop or not"]
