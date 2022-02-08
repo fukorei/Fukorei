@@ -12,12 +12,12 @@ module.exports = {
         setTimeout(() => {
             message.channel.send(`<@${message.author.id}> your reminder!`);
         }, ms(`${args[0]}`))
-        };
-
+        } else {
         message.reply(`i will remind you in ${args[0]}: ${reason}!`)
         setTimeout(() => {
             message.channel.send(`<@${message.author.id}> your reminder for ${reason}!`);
         }, ms(`${args[0]}`))
-    }
+        }
+        }
     }
 }
