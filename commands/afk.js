@@ -16,9 +16,9 @@ module.exports = {
             afkreason.set(message.author.id, reason);
         };
 
-        const mentioneduser = message.mentions.users.first();
+        const mentioneduser = message.mentions.members.first();
         if(mentioneduser.roles.cache.some(role => role.name === "AFK")){
             message.reply(`this person is currently AFK: ${afkreason.get(mentioneduser.id)}`)
-        };    
+        };
     }
 }
