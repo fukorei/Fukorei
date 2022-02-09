@@ -35,7 +35,7 @@ client.on("messageCreate",message=>{
     if (blarr.includes(message.author.id)) return;
     
     if(!message.content.toLowerCase().startsWith(prefix)){
-        client.commands.get('cmdswithoutprfx').execute(client, message, args);
+        client.commands.get('cmdswithoutprfx').execute(client, message, args, afkreason);
     } else {
 
     if(command === 'ping'){

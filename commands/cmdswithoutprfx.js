@@ -1,7 +1,7 @@
 module.exports = {
     name: 'cmdswithoutprfx',
     description: 'all the commands without prefix',
-    execute(client, message, args) {
+    execute(client, message, args, afkreason) {
         var ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
         if(ghevs.includes(message.content.toLowerCase())){
             message.channel.send('🪑👗⭐🤨')
