@@ -106,7 +106,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'afk'){
-        client.commands.get('afk').execute(client, message, args,);
+        client.commands.get('afk').execute(client, message, args);
     }
 
     else if(command === 'remind'){
