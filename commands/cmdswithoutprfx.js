@@ -50,5 +50,12 @@ module.exports = {
         if(sus.includes(message.content.toLowerCase())){
             message.channel.send('ඞ')
         }
+
+        if(message.member.roles.cache.some(role => role.name === "AFK")){
+            let role = message.member.guild.roles.cache.find(role => role.name === "AFK");
+            if (role) message.guild.members.cache.get(message.author.id).roles.remove(role);
+            message.reply(`oh, you're back, removed your afk!`);
+            afkreason.delete(message.author.id);
+        }
     }
 }

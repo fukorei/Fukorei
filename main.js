@@ -6,6 +6,7 @@ const fs = require('fs');
 const { MessageEmbed } = require('discord.js');
 const { pagination } = require('reconlx');
 const ms = require('ms');
+const afkreason = new Map();
 require("dotenv/config");
 
 
@@ -106,7 +107,7 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'afk'){
-        client.commands.get('afk').execute(client, message, args);
+        client.commands.get('afk').execute(client, message, args, afkreason);
     }
 
     else if(command === 'remind'){
