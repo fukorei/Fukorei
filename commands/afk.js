@@ -4,7 +4,7 @@ module.exports = {
         const reason = args.join(" ") || 'no reason!';
         const afkreason = new Map();
 
-        if(message.member.guild.roles.cache.some(role => role.name === "AFK")){
+        if(message.member.roles.cache.some(role => role.name === "AFK")){
             let role = message.member.guild.roles.cache.find(role => role.name === "AFK");
             if (role) message.guild.members.cache.get(message.author.id).roles.remove(role);
             message.reply(`oh, you're back, removed your afk!`);
