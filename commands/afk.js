@@ -2,6 +2,7 @@ module.exports = {
     name: 'afk',
     execute(client, message, args, afkreason) {
         const reason = args.join(" ") || 'no reason!';
+        const afkreason = new Map();
 
         if(!message.member.roles.cache.some(role => role.name === "AFK")){
             let role = message.member.guild.roles.cache.find(role => role.name === "AFK");
