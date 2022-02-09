@@ -2,6 +2,13 @@ module.exports = {
     name: 'cmdswithoutprfx',
     description: 'all the commands without prefix',
     execute(client, message, args) {
+
+        if(message.member.roles.cache.some(role => role.name === "AFK")){
+            let role = message.member.guild.roles.cache.find(role => role.name === "AFK");
+            if (role) message.guild.members.cache.get(message.author.id).roles.remove(role);
+            message.reply(`oh, you're back, removed your afk!`);
+        }
+
         var ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
         if(ghevs.includes(message.content.toLowerCase())){
             message.channel.send('🪑👗⭐🤨')
