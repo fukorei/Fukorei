@@ -1,6 +1,6 @@
 module.exports = {
     name: 'afk',
-    execute(client, message, args, afkreason) {
+    execute(client, message, args) {
         const reason = args.join(" ") || 'no reason!';
         const afkreason = new Map();
 
