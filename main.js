@@ -110,7 +110,6 @@ client.on("messageCreate",message=>{
     }
 
     else if(command === 'remind'){
-        console.log(args)
         client.commands.get('remind').execute(client, message, args, ms);
     }
 }
