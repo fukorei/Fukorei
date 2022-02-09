@@ -6,7 +6,7 @@ module.exports = {
         afk.set(message.author.id, [Date.now(), reason]);
         message.reply(`i set your afk: ${reason}`)
 
-        if(afk.get.includes(message.author.id)){
+        if(afk.get(message.author.id)){
             message.reply(`oh, youre back, removed your afk!`)
             afk.delete(message.author.id)
         }
