@@ -1,7 +1,7 @@
 module.exports = {
     name: "cmds",
     description: "the bots commands",
-    execute(client, message, args, prefix, ms, afkreason){
+    execute(client, message, args, prefix, ms, afkreason, command){
         if(command === 'ping'){
             client.commands.get('ping').execute(message, args);
         }
