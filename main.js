@@ -1,23 +1,30 @@
-const { Client, Intents } = require('discord.js');
-const Discord = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-const prefix ='segs ';
-const fs = require('fs');
-const { MessageEmbed } = require('discord.js');
-const { pagination } = require('reconlx');
-const ms = require('ms');
-const afkreason = new Map();
 require("dotenv/config");
 
+const fs = require('fs');
+const { Client, Intents, Collection } = require('discord.js');
 
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const afkreason = new Map();
+const prefix = 'segs ';
 
-client.commands = new Discord.Collection();
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+client.commands = new Collection();
+client.emitters = { client };
+
+const commandFiles = fs.readdirSync('./commands/')
+    .filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
-
     client.commands.set(command.name, command);
+}
+
+const eventFiles = fs.readFileSync('./events/')
+    .filter(file => file.endsWith('.js'))
+
+for (const file of eventFiles) {
+    const event = require(`./events/${file}`);
+    let emitter = client.emitters[event.emitter ? event.emitter : "client"];
+    emitter[event.once ? "once" : "on"](client, event.event, event.execute.bind(event));
 }
 
 client.on('ready', () => {

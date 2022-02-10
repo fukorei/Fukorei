@@ -1,19 +1,15 @@
 module.exports = {
     name: "spamqa",
-    description: "spam that mf",
-    execute(client, message, args, prefix){
+    execute(_, message, args) {
         if (message.author.bot) return;
-            if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")){
-                message.reply('mày làm gì có tuổi ping <:lul:806387931606024232>')
-            } else {
-    
-            if(Number.isNaN(+args[0])){
-                message.reply('that is not a valid amount of times to ping!')
-            } else {
-                for(let i = 0; i < +args[0]; i++){
-                    message.reply('<@602146178636709888>')
-                }
-            }
-        }
+
+        if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR"))
+            return message.reply('mày làm gì có tuổi ping <:lul:806387931606024232>')
+
+        if (Number.isNaN(+args[0]))
+            return message.reply('that is not a valid amount of times to ping!')
+
+        for (let i = 0; i < +args[0]; i++)
+            message.reply('<@602146178636709888>')
     }
 }
