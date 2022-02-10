@@ -2,7 +2,7 @@ const ALLOWED_MEMBERS = ["840145281806368798", "732043268946133133", "4802888261
 
 module.exports = {
     name: "spamle",
-    execute(message, args) {
+    execute(client, message, args) {
         if (message.author.bot) return;
 
         if (!ALLOWED_MEMBERS.includes(message.author.id))

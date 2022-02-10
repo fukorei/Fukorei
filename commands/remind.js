@@ -2,7 +2,7 @@ const ms = require('ms');
 
 module.exports = {
     name: 'remind',
-    execute(message, args) {
+    execute(client, message, args) {
         if (!args[0]) {
             return message.reply("add an amount of time!")
         }

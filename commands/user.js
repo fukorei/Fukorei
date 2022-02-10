@@ -2,8 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "user",
-    description: "User info",
-    execute(message) {
+    execute(client, message) {
         const Embed = MessageEmbed()
             .setColor("#ddbec3")
             // .setAvatar(message.author.displayAvatarURL())
