@@ -10,7 +10,8 @@ module.exports = {
             afkreason.delete(message.author.id);
         }
 
-        const mentioneduser = message.mentions.members.first();
+        const mentioneduser = message.mentions.members.first().resolve();
+        console.log(mentioneduser);
         if(mentioneduser.roles.cache.some(role => role.name === "AFK")){
             message.reply(`this person is currently afk: ${afkreason.get(mentioneduser.id)}`)
         }
