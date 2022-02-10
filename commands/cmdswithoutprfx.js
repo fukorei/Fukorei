@@ -2,7 +2,6 @@ module.exports = {
     name: 'cmdswithoutprfx',
     description: 'all the commands without prefix',
     execute(client, message, args, afkreason) {
-
         if(message.member.roles.cache.some(role => role.name === "AFK")){
             let role = message.member.guild.roles.cache.find(role => role.name === "AFK");
             if (role) message.guild.members.cache.get(message.author.id).roles.remove(role);
@@ -63,6 +62,11 @@ module.exports = {
         var sus = ["sú", "sus"]
         if(sus.includes(message.content.toLowerCase())){
             message.channel.send('ඞ')
+        }
+
+        var sautettdi = ["sau tết t đi"]
+        if(sautettdi.includes(message.content.toLowerCase())){
+            message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/941299164447383582/unknown.png')
         }
     }
 }
