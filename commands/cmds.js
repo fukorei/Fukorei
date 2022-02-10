@@ -67,7 +67,7 @@ module.exports = {
         }
     
         else if(command === 'maths'){
-            client.commands.get('maths').execute(client, message, args, prefix);
+            client.commands.get('maths').execute(client, message, args);
         }
     
         else if(command === 'afk'){

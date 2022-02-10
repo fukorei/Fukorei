@@ -3,7 +3,7 @@ const SYMBOLS = ["+", "-", "*", "/"];
 module.exports = {
     name: 'maths',
     description: 'basic maths',
-    execute(_, client, message, args) {
+    execute(client, message, args) {
         const symbols = ["+", "-", "*", "/"];
 
         let total = 0;
