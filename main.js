@@ -18,7 +18,7 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-const eventFiles = fs.readFileSync('./events/')
+const eventFiles = fs.readdirSync('./events/')
     .filter(file => file.endsWith('.js'))
 
 for (const file of eventFiles) {
