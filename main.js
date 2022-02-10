@@ -27,7 +27,7 @@ for (const file of eventFiles) {
     emitter[event.once ? "once" : "on"](client, event.event, event.execute.bind(event));
 }
 
-client.on('ready', () => {
+client.on("ready", () => {
     console.log('Online!')
     client.user.setActivity(`your mom`);
 });
