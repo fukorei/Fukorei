@@ -10,11 +10,11 @@ module.exports = {
             afkreason.delete(message.author.id);
         }
 
-        const afkmentioneduser = message.mentions.members.first().resolve();
-        console.log(afkmentioneduser);
-        if(afkmentioneduser.roles.cache.some(role => role.name === "AFK")){
-            message.reply(`this person is currently afk: ${afkreason.get(mentioneduser.id)}`)
-        }
+        // const afkmentioneduser = message.mentions.members.first().resolve();
+        // console.log(afkmentioneduser);
+        // if(afkmentioneduser.roles.cache.some(role => role.name === "AFK")){
+        //     message.reply(`this person is currently afk: ${afkreason.get(mentioneduser.id)}`)
+        // }
 
         var ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
         if(ghevs.includes(message.content.toLowerCase())){
