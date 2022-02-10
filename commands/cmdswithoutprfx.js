@@ -1,12 +1,18 @@
 module.exports = {
     name: 'cmdswithoutprfx',
     description: 'all the commands without prefix',
-    execute(client, message, args) {
+    execute(client, message, args, afkreason) {
 
         if(message.member.roles.cache.some(role => role.name === "AFK")){
             let role = message.member.guild.roles.cache.find(role => role.name === "AFK");
             if (role) message.guild.members.cache.get(message.author.id).roles.remove(role);
             message.reply(`oh, you're back, removed your afk!`);
+            afkreason.delete(message.author.id);
+        }
+
+        const mentioneduser = message.mentions.members.first();
+        if(mentioneduser.roles.cache.some(role => role.name === "AFK")){
+            message.reply(`this person is currently afk: ${afkreason.get(mentioneduser.id)}`)
         }
 
         var ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
