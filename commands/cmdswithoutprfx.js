@@ -35,7 +35,7 @@ module.exports = {
         }
     
         var urmom = ["ur mom", "your mom"]
-        if(urmom.includes(message.content.toLowerCase().has)){
+        if(urmom.includes(message.content.toLowerCase())){
             message.channel.send('<:yourmom:938793655781695498>')
         } 
     
