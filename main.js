@@ -18,14 +18,14 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-const eventFiles = fs.readdirSync('./events/')
-    .filter(file => file.endsWith('.js'))
+// const eventFiles = fs.readdirSync('./events/')
+//     .filter(file => file.endsWith('.js'))
 
-for (const file of eventFiles) {
-    const event = require(`./events/${file}`);
-    let emitter = client.emitters[event.emitter ? event.emitter : "client"];
-    emitter[event.once ? "once" : "on"](client, event.event, event.execute.bind(event));
-}
+// for (const file of eventFiles) {
+//     const event = require(`./events/${file}`);
+//     let emitter = client.emitters[event.emitter ? event.emitter : "client"];
+//     emitter[event.once ? "once" : "on"](client, event.event, event.execute.bind(event));
+// }
 
 client.on("ready", () => {
     console.log('Online!')
