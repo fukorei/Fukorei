@@ -15,5 +15,11 @@ module.exports = {
             message.reply(`oh, you're back, removed your afk!`);
             // afkreason.set(message.author.id, reason);
         };
+
+        const mentioneduser = message.mentions.members.first();
+        console.log(mentioneduser);
+        if(mentioneduser.roles.cache.some(role => role.name === "AFK")){
+            message.reply('this user is currently afk')
+        }
     }
 }
