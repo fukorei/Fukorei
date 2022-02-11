@@ -1,8 +1,6 @@
-const ms = require('ms');
-
 module.exports = {
     name: 'remind',
-    execute(client, message, args) {
+    execute(client, message, args, ms) {
         if (!args[0]) {
             return message.reply("add an amount of time!")
         }
