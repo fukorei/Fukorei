@@ -69,7 +69,7 @@ module.exports = {
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/941299164447383582/unknown.png')
         }
         
-        if(message.content.toLowerCase() === "khóa miệng thằng này cho bố"){
+        if(message.content.toLowerCase().startsWith("khóa miệng thằng này cho bố")){
             let mentioneduser = message.mentions.members.first();
             let allowedid = ["732043268946133133"]
 
@@ -80,9 +80,9 @@ module.exports = {
             if (!mentioneduser){
                 return message.channel.send('nhớ ping thằng bố muốn mute =))')
             }
-            
+
             mentioneduser.timeout(ms('5m'));
-            message.channel.send('testing')
+            message.channel.send('testing');
         }
 
         else if(message.content.toLowerCase() === "con gái ơi"){
