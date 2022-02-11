@@ -70,7 +70,7 @@ module.exports = {
         }
         
         else if(message.content.toLowerCase() === "con gái ơi"){
-            message.reply("dạ);
+            message.reply("dạ");
         }
     }
 }
