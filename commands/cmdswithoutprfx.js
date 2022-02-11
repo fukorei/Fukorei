@@ -68,5 +68,11 @@ module.exports = {
         if(sautettdi.includes(message.content.toLowerCase())){
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/941299164447383582/unknown.png')
         }
+        
+        if(message.content.toLowerCase() === "khóa miệng thằng này cho bố"){
+            const mentioneduser = message.mentions.members.first();
+            mentioneduser.timeout(ms('5m'));
+            message.channel.send('testing')
+        }
     }
 }
