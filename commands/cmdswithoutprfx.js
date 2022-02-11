@@ -68,5 +68,9 @@ module.exports = {
         if(sautettdi.includes(message.content.toLowerCase())){
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/941299164447383582/unknown.png')
         }
+        
+        else if(message.content.toLowerCase() === "con gái ơi"){
+            message.reply("dạ);
+        }
     }
 }
