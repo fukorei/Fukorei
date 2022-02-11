@@ -73,4 +73,4 @@ module.exports = {
             message.reply("dạ");
         }
     }
-}
+};
