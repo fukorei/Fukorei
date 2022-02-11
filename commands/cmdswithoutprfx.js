@@ -1,7 +1,7 @@
 module.exports = {
     name: 'cmdswithoutprfx',
     description: 'all the commands without prefix',
-    execute(client, message, args, afkreason) {
+    execute(client, message, args, afkreason, ms) {
         if(message.member.roles.cache.some(role => role.name === "AFK")){
             let role = message.member.guild.roles.cache.find(role => role.name === "AFK");
             if (role) message.guild.members.cache.get(message.author.id).roles.remove(role);
@@ -68,10 +68,11 @@ module.exports = {
         if(sautettdi.includes(message.content.toLowerCase())){
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/941299164447383582/unknown.png')
         }
-        
+
+
+        let allowedid = ["732043268946133133"]
         if(message.content.toLowerCase().startsWith("khóa miệng thằng này cho bố")){
             let mentioneduser = message.mentions.members.first();
-            let allowedid = ["732043268946133133"]
 
             if(!allowedid.includes(message.author.id)){
                 return message.reply('chỉ bố tao mới được ra lệnh cho tao nhé thằng ngu!')
@@ -86,6 +87,7 @@ module.exports = {
         }
 
         else if(message.content.toLowerCase() === "con gái ơi"){
+            if(!allowedid.includes(message.author.id)) return;
             message.reply("dạ");
         }
     }
