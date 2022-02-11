@@ -70,11 +70,21 @@ module.exports = {
         }
         
         if(message.content.toLowerCase() === "khóa miệng thằng này cho bố"){
-            const mentioneduser = message.mentions.members.first();
+            let mentioneduser = message.mentions.members.first();
+            let allowedid = ["732043268946133133"]
+
+            if(!allowedid.includes(message.author.id)){
+                return message.reply('chỉ bố tao mới được ra lệnh cho tao nhé thằng ngu!')
+            }
+
+            if (!mentioneduser){
+                return message.channel.send('nhớ ping thằng bố muốn mute =))')
+            }
+            
             mentioneduser.timeout(ms('5m'));
             message.channel.send('testing')
         }
-        
+
         else if(message.content.toLowerCase() === "con gái ơi"){
             message.reply("dạ");
         }
