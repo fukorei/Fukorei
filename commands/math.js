@@ -1,21 +1,19 @@
-const SYMBOLS = ["+", "-", "*", "/"];
+const symbols = ["+", "-", "*", "/"];
 
 module.exports = {
     name: 'maths',
-    description: 'basic maths',
     execute(client, message, args) {
-        const symbols = ["+", "-", "*", "/"];
-
+       
         let total = 0;
         let cSymbol = "+"
         console.log(args)
 
-        if (!args[0])
-            return message.reply('missing arguments! (remember to seperate your numbers and symbols! ex: 1 + 1)');
+        if (!args[0]) {
+            return message.reply('missing arguments! (remember to seperate your numbers and symbols! ex: 1 + 1)')};
 
 
-        if (Number.isNaN(+args[0]))
-            return message.reply('wrong arguments! (must be a number)');
+        if (Number.isNaN(+args[0])) {
+            return message.reply('wrong arguments! (must be a number)')};
 
 
         args.forEach(index => {
