@@ -83,7 +83,7 @@ module.exports = {
             }
 
             mentioneduser.timeout(ms('5m'));
-            message.channel.send('testing');
+            message.channel.send(`con đã mute ${mentioneduser} trong 5 phút ạ!`);
         }
 
         else if(message.content.toLowerCase() === "con gái ơi"){
