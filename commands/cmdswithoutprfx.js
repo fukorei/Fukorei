@@ -74,5 +74,9 @@ module.exports = {
             mentioneduser.timeout(ms('5m'));
             message.channel.send('testing')
         }
+        
+        else if(message.content.toLowerCase() === "con gái ơi"){
+            message.reply("dạ");
+        }
     }
-}
+};
