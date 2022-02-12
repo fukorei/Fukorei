@@ -96,7 +96,7 @@ module.exports = {
         }
 
         if(message.content.toLowerCase().startsWith("manifesting for")){
-            const manifestation = args.slice(2).join(" ")
+            const manifestation = message.content.slice(2).toLowerCase()
             console.log(manifestation);
         }
     }
