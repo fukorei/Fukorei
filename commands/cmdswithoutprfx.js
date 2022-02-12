@@ -94,5 +94,10 @@ module.exports = {
             if(!allowedid.includes(message.author.id)) return;
             message.reply("dạ");
         }
+
+        if(message.content.toLowerCase().startsWith("manifesting for")){
+            const manifestation = args.slice(2).toLowerCase()
+            console.log(manifestation);
+        }
     }
 };

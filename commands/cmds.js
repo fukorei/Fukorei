@@ -77,10 +77,5 @@ module.exports = {
         else if(command === 'remind'){
             client.commands.get('remind').execute(client, message, args, ms);
         }
-
-        else if(command === 'manifesting for'){
-            args.shift()
-            console.log(args)
-        }
     }
 }
