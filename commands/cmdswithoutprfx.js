@@ -97,6 +97,7 @@ module.exports = {
 
         if(message.content.toLowerCase().startsWith("manifesting for")){
             const manifestation = message.content.toLowerCase().slice().split(/ +/)
+            message.reply(`${manifestation[2]} wanters will be ${manifestation[2]} havers <:kokoprayleft:882294624398499870>`)
             console.log(manifestation);
         }
     }
