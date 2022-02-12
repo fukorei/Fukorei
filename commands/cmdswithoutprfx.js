@@ -73,7 +73,6 @@ module.exports = {
 
 
         let allowedid = ["732043268946133133"]
-        let khoamieng = ["khóa miệng thằng này cho bố", "khóa mõm thằng này cho bố", "khóa miệng thg này cho bố", "khóa mõm thg này cho bố", "khóa mõm thg này", "khóa mõm thằng này"]
         if(message.content.toLowerCase().startsWith("khóa miệng thằng này cho bố")){
             let mentioneduser = message.mentions.members.first();
 
