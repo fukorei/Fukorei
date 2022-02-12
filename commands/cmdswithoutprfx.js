@@ -86,7 +86,8 @@ module.exports = {
             message.reply(`con đã timeout ${mentioneduser} trong 5 phút ạ!`);
         }
 
-        else if(message.content.toLowerCase() === "con gái ơi"){
+        const congaioi = ["con gái", "con gái ơi", "con gái ui"]
+        if(congaioi.includes(message.content.toLowerCase())){
             if(!allowedid.includes(message.author.id)) return;
             message.reply("dạ");
         }
