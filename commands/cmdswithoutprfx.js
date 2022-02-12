@@ -96,8 +96,9 @@ module.exports = {
         }
 
         if(message.content.toLowerCase().startsWith("manifesting for")){
-            const manifestation = message.content.toLowerCase().slice(16)
-            message.reply(`${manifestation[2]} wanters will be ${manifestation[2]} havers <:kokoprayleft:882294624398499870>`)
+            const manifestation = message.content.toLowerCase().split(/ +/).slice(2)
+            manifestation.join(" ")
+            message.reply(`${manifestation} wanters will be ${manifestation} havers <:kokoprayleft:882294624398499870>`)
             console.log(manifestation);
         }
     }
