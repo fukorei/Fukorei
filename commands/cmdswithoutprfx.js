@@ -94,12 +94,5 @@ module.exports = {
             if(!allowedid.includes(message.author.id)) return;
             message.reply("dạ");
         }
-
-        if(message.content.toLowerCase().startsWith("manifesting for")){
-            const manifestation = message.content.toLowerCase().split(/ +/).slice(2)
-            manifestation.join(" ")
-            message.reply(`${manifestation} wanters will be ${manifestation} havers <:kokoprayleft:882294624398499870>`)
-            console.log(manifestation);
-        }
     }
 };
