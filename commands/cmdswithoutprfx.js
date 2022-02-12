@@ -8,11 +8,13 @@ module.exports = {
             message.reply(`oh, you're back, removed your afk!`);
             afkreason.delete(message.author.id);
         }
-
+        
+        // if(message){
         // const afkmentioneduser = message.mentions.members.first().resolve();
         // console.log(afkmentioneduser);
         // if(afkmentioneduser.roles.cache.some(role => role.name === "AFK")){
         //     message.reply(`this person is currently afk: ${afkreason.get(mentioneduser.id)}`)
+        // }
         // }
 
         var ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
@@ -59,10 +61,10 @@ module.exports = {
             client.commands.get('maths').execute(client, message, args);
         }
 
-        var sus = ["sú", "sus"]
-        if(sus.includes(message.content.toLowerCase())){
-            message.channel.send('ඞ')
-        }
+        // var sus = ["sú", "sus"]
+        // if(sus.includes(message.content.toLowerCase())){
+        //     message.channel.send('ඞ')
+        // }
 
         var sautettdi = ["sau tết t đi"]
         if(sautettdi.includes(message.content.toLowerCase())){
@@ -71,7 +73,8 @@ module.exports = {
 
 
         let allowedid = ["732043268946133133"]
-        if(message.content.toLowerCase().startsWith("khóa miệng thằng này cho bố")){
+        let khoamieng = ["khóa miệng thằng này cho bố", "khóa mõm thằng này cho bố", "khóa miệng thg này cho bố", "khóa mõm thg này cho bố", "khóa mõm thg này", "khóa mõm thằng này"]
+        if(message.content.toLowerCase().startsWith(khoamieng)){
             let mentioneduser = message.mentions.members.first();
 
             if(!allowedid.includes(message.author.id)){
