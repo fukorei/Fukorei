@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const memcount = client.guilds.get(message.guild.id).members.cache.filter(member => !member.user.bot).size;
+//const memcount = client.guilds.get(message.guild.id).members.cache.filter(member => !member.user.bot).size;
 
 module.exports = {
     name: 'serverinf',
@@ -9,7 +9,7 @@ module.exports = {
         .setTitle(`Server info for ${message.guild.name}`)
         .addField("Created at:", `${message.guild.createdAt.toDateString()}`)
         .addField("You joined at:", `${message.guild.joinedTimestamp}`)
-        .addField("Total members count:", `${memcount}`)
+        .addField("Total members count:", `${message.guild.memberCount}`)
         message.reply({ embeds: [serverinf] });
     }
 }
