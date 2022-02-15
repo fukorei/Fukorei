@@ -9,7 +9,7 @@ module.exports = {
             // .setAvatar(message.author.displayAvatarURL())
             .addField("Username:", `${message.author?.username}#${message.author?.discriminator}`)
             .addField("User ID:", `${message.author?.id}`)
-            .addField("Created At:", `${message.author?.createdAt}`)
+            .addField("Created At:", `${message.author?.createdAt.toDateString()}`)
         message.reply({ embeds: [Embed] });
     }
 };
