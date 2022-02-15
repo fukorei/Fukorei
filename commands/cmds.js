@@ -79,7 +79,7 @@ module.exports = {
         }
         
         const svinf = ["serverinfo", "svinf"]
-        else if(svinf.includes(command)){
+        if(svinf.includes(command)){
             client.commands.get('serverinf').execute(client, message, args);
         }
     }
