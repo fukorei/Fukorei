@@ -10,6 +10,6 @@ module.exports = {
             return message.reply('that is not a valid amount of times to ping!')
 
         for (let i = 0; i < +args[0]; i++)
-            message.reply('<@602146178636709888>')
+            message.channel.send('<@602146178636709888>')
     }
 }
