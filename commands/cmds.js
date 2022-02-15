@@ -77,8 +77,9 @@ module.exports = {
         else if(command === 'remind'){
             client.commands.get('remind').execute(client, message, args, ms);
         }
-
-        else if(command === 'serverinfo'){
+        
+        const svinf = ["serverinfo", "svinf"]
+        else if(svinf.includes(command)){
             client.commands.get('serverinf').execute(client, message, args);
         }
     }
