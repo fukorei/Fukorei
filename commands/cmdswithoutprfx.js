@@ -96,8 +96,8 @@ module.exports = {
 
         else if(message.content.toLowerCase().startsWith("folon")){
             const customfolon = message.content.slice(5).toLowerCase()
-            
-            if(!customfolon) return;
+
+            if(customfolon === " ") return;
 
             message.channel.send(`Quá ghê gớm....🌚😳\nVà đây là Folon${customfolon}!😱😱\nFolon${customfolon} ui... 🥶🥶👿😳một tình huống múa phải nói là cực 👿gắt!!\n*music🤯\nThẹn thùng nhìn em quay gót đi mãi😞😞💔\nAnh đứng chết lặng trong mưa😭😭\nDù rằng bên😊😊 em đã có aiS\nNhưng nơi đây anh 🤗🤗🥱vẫn còn chờ...`)
         }
