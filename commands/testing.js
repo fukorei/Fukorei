@@ -6,7 +6,7 @@ module.exports = {
     execute(client, message, args, moment){
         const svjoined = message.member.joinedAt
         const test = new MessageEmbed()
-        .addField("test1", `${moment.svjoined.format('DD/MM/YY')}`)
+        .addField("test1", `${moment(svjoined).format('DD/MM/YY')}`)
 
         message.reply({ embeds: [test] });
     }
