@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'serverinf',
-    execute(client, message, args){
+    execute(client, message, args, moment){
         //const memcount = client.guilds.get(message.guild.id).members.cache.filter(member => !member.user.bot).size;
         const serverinf = new MessageEmbed()
         .setColor("#ddbec3")
