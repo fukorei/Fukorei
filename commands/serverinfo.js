@@ -10,6 +10,7 @@ module.exports = {
         .addField("Created at:", `${message.guild.createdAt.toDateString()}`)
         .addField("You joined at:", `${message.member.joinedAt.toDateString()}`)
         .addField("Total members count:", `${message.guild.memberCount}`)
+        console.log(message.member.joinedAt)
         message.reply({ embeds: [serverinf] });
     }
 }
