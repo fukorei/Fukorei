@@ -83,8 +83,8 @@ module.exports = {
             client.commands.get('serverinf').execute(client, message, args);
         }
 
-        else if(command === 'testing'){
-            client.commands.get('testing').execute(client, message, args);
+        else if(command === 'test'){
+            client.commands.get('test').execute(client, message, args);
         }
     }
 }
