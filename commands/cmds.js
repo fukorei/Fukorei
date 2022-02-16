@@ -1,7 +1,7 @@
 module.exports = {
     name: "cmds",
     description: "the bots commands",
-    execute(client, message, args, prefix, ms, afkreason, command){
+    execute(client, message, args, prefix, ms, afkreason, command, moment){
         if(command === 'ping'){
             client.commands.get('ping').execute(message, args);
         }
@@ -84,7 +84,7 @@ module.exports = {
         }
 
         else if(command === 'test'){
-            client.commands.get('test').execute(client, message, args);
+            client.commands.get('test').execute(client, message, args, moment);
         }
     }
 }

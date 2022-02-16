@@ -2,6 +2,7 @@ require("dotenv/config");
 
 const fs = require('fs');
 const ms = require('ms');
+const moment = require('moment');
 const { Client, Intents, Collection } = require('discord.js');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
@@ -45,7 +46,7 @@ client.on("messageCreate",message=>{
     if(!message.content.toLowerCase().startsWith(prefix)){
         client.commands.get('cmdswithoutprfx').execute(client, message, args, afkreason, ms);
     } else {
-        client.commands.get('cmds').execute(client, message, args, prefix, ms, afkreason, command);
+        client.commands.get('cmds').execute(client, message, args, prefix, ms, afkreason, command, moment);
     }
 });
 
