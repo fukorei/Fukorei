@@ -34,9 +34,9 @@ module.exports = {
             message.channel.send
             ("Quá ghê gớm....🌚😳\nVà đây là Folontilô!😱😱\nFolontilô ui... 🥶🥶👿😳một tình huống múa phải nói là cực 👿gắt!!\n*music🤯\nThẹn thùng nhìn em quay gót đi mãi😞😞💔\nAnh đứng chết lặng trong mưa😭😭\nDù rằng bên😊😊 em đã có ai\nNhưng nơi đây anh 🤗🤗🥱vẫn còn chờ...")
         }
-    
-        var urmom = ["ur mom", "your mom"]
-        if(urmom.some(word => message.content.includes(word))){
+
+        const urmom = ["your mom", "ur mom"]
+        if(message.content.toLowerCase().has(urmom)){
             message.channel.send('<:yourmom:938793655781695498>')
         } 
     
