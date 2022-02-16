@@ -10,7 +10,7 @@ module.exports = {
             client.commands.get('user').execute(client, message, args);
         }
     
-        else if(command === 'lock'){
+        else if(command === 'lock' || message.content.toLowerCase().startsWith("khóa kênh này hộ bố")){
             client.commands.get('lock').execute(client, message, args);
         }
     
