@@ -38,7 +38,7 @@ module.exports = {
         const urmom = ["your mom", "ur mom"]
         if(urmom.includes(message.content.toLowerCase())){
             message.channel.send('<:yourmom:938793655781695498>')
-        } 
+        }
     
         if(message.content.toLowerCase() === 'kappa'){
             message.channel.send('<:kappa:938793655991418921> ')
@@ -96,10 +96,13 @@ module.exports = {
 
         else if(message.content.toLowerCase().startsWith("folon")){
             const customfolon = message.content.slice(5).toLowerCase()
-
             if(message.content.length === 5) return;
-
             message.channel.send(`Quá ghê gớm....🌚😳\nVà đây là Folon${customfolon}!😱😱\nFolon${customfolon} ui... 🥶🥶👿😳một tình huống múa phải nói là cực 👿gắt!!\n*music🤯\nThẹn thùng nhìn em quay gót đi mãi😞😞💔\nAnh đứng chết lặng trong mưa😭😭\nDù rằng bên😊😊 em đã có ai\nNhưng nơi đây anh 🤗🤗🥱vẫn còn chờ...`)
+        }
+
+        let cappa = ["cappa", "cappalul"]
+        if(cappa.includes(message.content.toLowerCase())){
+            message.channel.send('<:cappalul:944215825601146930>')
         }
     }
 };
