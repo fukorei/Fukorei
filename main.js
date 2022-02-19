@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-const { mongooseConnectionURL } = process.env.mongooseConnectionURL;
+const mongooseConnectionString = process.env.mongooseConnectionString;
 const afkreason = new Map();
 const prefix = 'segs ';
 
@@ -52,11 +52,11 @@ client.on("messageCreate",message=>{
     }
 });
 
-// if (!mongooseConnectionURL) return;
-// mongoose.connect(mongooseConnectionURL, {
-//     useFindandModify: false,
-//     useUnifiedTopology: true,
-//     useNewUrlParser: true,
-// }).then(() => console.log('connected to mongodb')).catch((err) => console.error(err));
+if (!mongooseConnectionString) return;
+mongoose.connect(mongooseConnectionString, {
+    //useFindAndModify: false,
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+}).then(console.log('connected to database')).catch((err) => console.error(err));
 
 client.login(process.env.DISCORD_BOT_TOKEN)
