@@ -23,11 +23,7 @@ for (const file of commandFiles) {
 }
 
 if (!mongooseConnectionURL) return;
-mongoose.connect(mongooseConnectionURL, {}).then(() => {
-    console.log('connected to database');}
-).catch((err) => {
-    console.log('error connecting to database')
-})
+mongoose.connect(mongooseConnectionString).then(() => console.log('connected to mongodb'));
 
 // const eventFiles = fs.readdirSync('./events/')
 //     .filter(file => file.endsWith('.js'))
