@@ -32,7 +32,7 @@ for (const file of commandFiles) {
 // }
 
 client.on("ready", () => {
-    console.log('Online!')
+    console.log('online!')
     client.user.setActivity(`your mom`);
 });
 
