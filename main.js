@@ -23,12 +23,8 @@ for (const file of commandFiles) {
 }
 
 if (!mongooseConnectionURL) return;
-mongoose.connect(mongooseConnectionURL, {
-    // useNewUrlParser = true,
-    useUnifiedTopology = true,
-    userFindAndModify = false
-}).then(() => {
-    console.log('connected to database too');}
+mongoose.connect(mongooseConnectionURL, {}).then(() => {
+    console.log('connected to database');}
 ).catch((err) => {
     console.log('error connecting to database')
 })
