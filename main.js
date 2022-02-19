@@ -3,9 +3,11 @@ require("dotenv/config");
 const fs = require('fs');
 const ms = require('ms');
 const moment = require('moment');
-const { Client, Intents, Collection } = require('discord.js');
+const mongoose = require('mongoose')
 
+const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const { mongooseConnectionURL } = process.env.mongooseConnectionURL;
 const afkreason = new Map();
 const prefix = 'segs ';
 
@@ -19,6 +21,17 @@ for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     client.commands.set(command.name, command);
 }
+
+if (!mongooseConnectionURL) return;
+mongoose.connect(mongooseConnectionURL, {
+    useNewUrlParser = true,
+    useUnifiedTopology = true,
+    userFindAndModify = false
+}).then(() => {
+    console.log('connected to database too');}
+).catch((err) => {
+    console.log('error connecting to database')
+})
 
 // const eventFiles = fs.readdirSync('./events/')
 //     .filter(file => file.endsWith('.js'))
