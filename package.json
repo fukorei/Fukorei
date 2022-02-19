@@ -10,13 +10,13 @@
   "author": "arizl",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.6.0",
     "discord-reply": "0.1.2",
-    "mongoose": "^6.2.2",
-    "reconlx": "^2.0.1",
+    "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
     "moment": "^2.29.1",
-    "ms": "^2.1.3"
+    "mongoose": "^6.2.2",
+    "ms": "^2.1.3",
+    "reconlx": "^2.0.1"
   },
   "engines": {
     "node": "16.6"
