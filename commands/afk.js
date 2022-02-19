@@ -1,25 +1,29 @@
+const schema = require('../schema/afkschema');
+
 module.exports = {
     name: 'afk',
-    execute(client, message, args, afkreason) {
+    execute(client, message, args) {
         const reason = args.join(" ") || 'no reason!';
+        let data
+        try{
+            data = schema.findOne({
+                userId: message.author.id,
+                guildId: message.guild.id,
+            })
 
-        if (!message.member.roles.cache.some(role => role.name === "AFK")) {
-            let role = message.member.guild.roles.cache.find(role => role.name === "AFK");
-            if (role) message.guild.members.cache.get(message.author.id).roles.add(role);
-            message.reply(`you are now afk: ${reason}!`);
-            return afkreason.set(message.author.id, reason);
+            if(!data){
+                data = schema.create({
+                    userId: message.author.id,
+                    guildId: message.guild.id,
+                })
+            }
+        } catch(error){
+            console.log(error)
         }
 
-        let role = message.member.guild.roles.cache.find(role => role.name === "AFK");
-        if (role) message.guild.members.cache.get(message.author.id).roles.remove(role);
-        message.reply(`oh, you're back, removed your afk!`);
-        afkreason.delete(message.author.id);
-
-
-        // const mentioneduser = message.mentions.members.first().resolve();
-        // console.log(mentioneduser);
-        // if(mentioneduser.roles.cache.some(role => role.name === "AFK")){
-        //     message.reply('this user is currently afk')
-        // }
+        message.reply(`i set your afk:${reason}`)
+        data.afk = true
+        data.afkreason = reason
+        data.save()
     }
 }

@@ -8,7 +8,6 @@ const mongoose = require('mongoose');
 const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const mongooseConnectionString = process.env.mongooseConnectionString;
-const afkreason = new Map();
 const prefix = 'segs ';
 
 client.commands = new Collection();
@@ -46,9 +45,9 @@ client.on("messageCreate",message=>{
     if (blarr.includes(message.author.id)) return;
     
     if(!message.content.toLowerCase().startsWith(prefix)){
-        client.commands.get('cmdswithoutprfx').execute(client, message, args, afkreason, ms);
+        client.commands.get('cmdswithoutprfx').execute(client, message, args, ms);
     } else {
-        client.commands.get('cmds').execute(client, message, args, prefix, ms, afkreason, command, moment);
+        client.commands.get('cmds').execute(client, message, args, prefix, ms, command, moment);
     }
 });
 
