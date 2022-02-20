@@ -1,6 +1,6 @@
 const discord = require('discord.js')
 const schema = require('../schema/afkschema')
-consr nickbfr = message.member.displayName;
+const nickbfr = message.member.displayName;
 
 module.exports = {
     name: 'afk',
