@@ -19,7 +19,7 @@ const afkschema = mongoose.Schema({
     }, 
     nickbefore:{
         type: String,
-        required: true,
+        required: null,
     }
 })
 
