@@ -11,13 +11,13 @@ module.exports = {
                 data = await schema.findOne({
                     userId: message.author.id,
                     guildId: message.guild.id,
-                    // nickbefore: `<@${message.author.id}>`,
+                    nickbefore: message.author.displayName
                 })
                 if(!data) {
                     data = await schema.create({
                         userId: message.author.id,
                         guildId: message.guild.id,
-                        // nickbefore: `<@${message.author.id}>`,
+                        nickbefore: message.author.displayName
                     })
                 }
             } catch(e) {
