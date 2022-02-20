@@ -2,6 +2,7 @@ module.exports = {
     name: 'cmdswithoutprfx',
     description: 'all the commands without prefix',
     run: async (client, message, args, ms, afks) => {
+        const nickbfr = message.member.displayName;
         let data2;
         try {
             data2 = await afks.findOne({
@@ -24,7 +25,7 @@ module.exports = {
             data2.afkreason = null
             data2.afk = false
             message.channel.send("oh, you're back, removed ur afk!")
-            // message.member.setNickname(`${data2.nickbefore}`)
+            message.member.setNickname(`${nickbfr.slice(0,6)}`)
             await data2.save()
         }
 
