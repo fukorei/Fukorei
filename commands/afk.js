@@ -11,13 +11,13 @@ module.exports = {
                 data = await schema.findOne({
                     userId: message.author.id,
                     guildId: message.guild.id,
-                    nickbefore: `${message.member.displayName}`,
+                    // nickbefore: `${message.member.displayName}`,
                 })
                 if(!data) {
                     data = await schema.create({
                         userId: message.author.id,
                         guildId: message.guild.id,
-                        nickbefore: `${message.member.displayName}`,
+                        // nickbefore: `${message.member.displayName}`,
                     })
                 }
             } catch(e) {
@@ -30,7 +30,7 @@ module.exports = {
             await data.save()
 
             if(message.author.id === message.guild.ownerId) return;
-            message.member.setNickname(`${afknick}` + `${message.author.displayName}`)
+            // message.member.setNickname(`${afknick}` + `${message.author.displayName}`)
         
         }
         

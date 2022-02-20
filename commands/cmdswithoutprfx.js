@@ -7,13 +7,13 @@ module.exports = {
             data2 = await afks.findOne({
                 userId: message.author.id,
                 guildId: message.guild.id,
-                nickbefore: `${message.member.displayName}`,
+                // nickbefore: `${message.member.displayName}`,
             })
             if (!data2) {
                 data2 = await afks.create({
                     userId: message.author.id,
                     guildId: message.guild.id,
-                    nickbefore: `${message.member.displayName}`,
+                    // nickbefore: `${message.member.displayName}`,
                 })
             }
         } catch (error) {
@@ -24,7 +24,7 @@ module.exports = {
             data2.afkreason = null
             data2.afk = false
             message.channel.send("oh, you're back, removed ur afk!")
-            message.member.setNickname(`${data2.nickbefore}`)
+            // message.member.setNickname(`${data2.nickbefore}`)
             await data2.save()
         }
 
