@@ -13,7 +13,7 @@ const fischl = [
 module.exports = {
     name: "fischl",
     description: "rip le",
-    execute(_, message) {
+    run: async(_, message) => {
         const randomfischl = fischl[Math.floor(Math.random() * fischl.length)];
         message.channel.send(randomfischl)
     }

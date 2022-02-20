@@ -2,7 +2,7 @@ const symbols = ["+", "-", "*", "/"];
 
 module.exports = {
     name: 'maths',
-    execute(client, message, args) {
+    run: async(client, message, args) => {
        
         let total = 0;
         let cSymbol = "+"

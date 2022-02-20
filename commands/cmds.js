@@ -1,21 +1,21 @@
 module.exports = {
     name: "cmds",
     description: "the bots commands",
-    execute(client, message, args, prefix, ms, afkreason, command, moment){
+    run: async (client, message, args, prefix, ms, command, moment, url, db) => {
         if(command === 'ping'){
-            client.commands.get('ping').execute(message, args);
+            client.commands.get('ping').run(message, args);
         }
     
         else if(command === 'user'){
-            client.commands.get('user').execute(client, message, args);
+            client.commands.get('user').run(client, message, args);
         }
     
         else if(command === 'lock' || message.content.toLowerCase().startsWith("khóa kênh này hộ bố")){
-            client.commands.get('lock').execute(client, message, args);
+            client.commands.get('lock').run(client, message, args);
         }
     
         else if(command === 'unlock'){
-            client.commands.get('unlock').execute(client, message, args);
+            client.commands.get('unlock').run(client, message, args);
         }
     
         else if(command === 'prefix'){
@@ -31,7 +31,7 @@ module.exports = {
         }
     
         else if(command === 'spamqa'){
-            client.commands.get('spamqa').execute(client, message, args, prefix);
+            client.commands.get('spamqa').run(client, message, args, prefix);
         }
             
         else if(command === 'sadge'){
@@ -39,52 +39,52 @@ module.exports = {
         }
     
         else if(command === "help"){
-            client.commands.get('help').execute(client, message, args)
+            client.commands.get('help').run(client, message, args)
         }
     
         else if(command === 'changelogs'){
-            client.commands.get('changelogs').execute(client, message, args);
+            client.commands.get('changelogs').run(client, message, args);
         }
     
         else if(command === 'le'){
-            client.commands.get('fischl').execute(client, message, args);
+            client.commands.get('fischl').run(client, message, args);
         }
     
         else if(command === 'github'){
-            client.commands.get('github').execute(client, message, args);
+            client.commands.get('github').run(client, message, args);
         }
     
         else if(command === 'đàm'){
-            client.commands.get('dam').execute(client,message,args);
+            client.commands.get('dam').run(client,message,args);
         }
     
         else if(command === 'say'){
-            client.commands.get('say').execute(client, message, args);
+            client.commands.get('say').run(client, message, args);
         }
     
         else if(command === 'spamle'){
-            client.commands.get('spamle').execute(client, message, args, prefix);
+            client.commands.get('spamle').run(client, message, args, prefix);
         }
     
         else if(command === 'maths'){
-            client.commands.get('maths').execute(client, message, args);
+            client.commands.get('maths').run(client, message, args);
         }
     
         else if(command === 'afk'){
-            client.commands.get('afk').execute(client, message, args, afkreason);
+            client.commands.get('afk').run(client, message, args, url, db);
         }
     
         else if(command === 'remind'){
-            client.commands.get('remind').execute(client, message, args, ms);
+            client.commands.get('remind').run(client, message, args, ms);
         }
         
         const svinf = ["serverinfo", "svinf"]
         if(svinf.includes(command)){
-            client.commands.get('serverinf').execute(client, message, args, moment);
+            client.commands.get('serverinf').run(client, message, args, moment);
         }
 
         else if(command === 'test'){
-            client.commands.get('test').execute(client, message, args, moment);
+            client.commands.get('test').run(client, message, args, moment);
         }
     }
 }

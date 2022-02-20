@@ -16,6 +16,10 @@ const afkschema = mongoose.Schema({
     afkreason:{
         type: String,
         default: null,
+    }, 
+    nickbefore:{
+        type: String,
+        required: true,
     }
 })
 

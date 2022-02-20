@@ -1,6 +1,6 @@
 module.exports = {
     name: "spamqa",
-    execute(client, message, args) {
+    run: async(client, message, args) => {
         if (message.author.bot) return;
 
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR"))

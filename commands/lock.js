@@ -1,7 +1,7 @@
 module.exports = {
     name: 'lock',
     description: 'Locks the specified channel!',
-    execute(_, message, args) {
+    run: async(_, message, args) => {
         const role = message.guild.roles.cache.find(r => r.name === '@everyone')
         let channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
         if (!channel) channel = message.channel;

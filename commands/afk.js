@@ -1,29 +1,37 @@
-const schema = require('../schema/afkschema');
+const discord = require('discord.js')
+const schema = require('../schema/afkschema')
 
 module.exports = {
     name: 'afk',
-    execute(client, message, args) {
+    run: async (client, message, args, url, db) => {
         const reason = args.join(" ") || 'no reason!';
-        let data
-        try{
-            data = schema.findOne({
-                userId: message.author.id,
-                guildId: message.guild.id,
-            })
-
-            if(!data){
-                data = schema.create({
+        const afknick = '[AFK] ';
+            let data;
+            try {
+                data = await schema.findOne({
                     userId: message.author.id,
                     guildId: message.guild.id,
+                    // nickbefore: `<@${message.author.id}>`,
                 })
+                if(!data) {
+                    data = await schema.create({
+                        userId: message.author.id,
+                        guildId: message.guild.id,
+                        // nickbefore: `<@${message.author.id}>`,
+                    })
+                }
+            } catch(e) {
+                console.log(e)
             }
-        } catch(error){
-            console.log(error)
-        }
+        
+            message.channel.send(`i set your afk: ${reason}`)
+            data.afk = true
+            data.afkreason = reason
+            await data.save()
 
-        message.reply(`i set your afk:${reason}`)
-        data.afk = true
-        data.afkreason = reason
-        data.save()
-    }
+            if(message.author.id === message.guild.ownerId) return;
+            message.member.setNickname(`${afknick}` + `${message.author.username}`)
+        
+        }
+        
 }

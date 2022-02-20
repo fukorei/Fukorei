@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: "user",
-    execute(client, message) {
+    run: async(client, message) => {
         const userinfo = new Discord.MessageEmbed()
             .setColor("#ddbec3")
             // .setAvatar(message.author.displayAvatarURL())

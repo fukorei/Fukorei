@@ -1,6 +1,6 @@
 module.exports = {
     name: 'remind',
-    execute(client, message, args, ms) {
+    run: async(client, message, args, ms) => {
         const reason = args.slice(1).join(" ");
         const time = message.content.slice(3,4)
         console.log(time)

@@ -1,7 +1,7 @@
 module.exports = {
     name: "github",
     description: "github commands",
-    execute(_, message, args) {
+    run: async(_, message, args) => {
         switch (args[0]) {
             case "commits":
                 return message.reply('here are the commits, basiclly whats changed in my code\n<https://github.com/arizl/segs/commits/main>')

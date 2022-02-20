@@ -1,6 +1,6 @@
 module.exports = {
     name: "ping",
-    execute(message) {
+    run: async (message) => {
         message.reply(`pong, ${Date.now() - message.createdTimestamp}ms`);
     }
 }

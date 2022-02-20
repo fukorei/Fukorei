@@ -4,7 +4,7 @@ const { pagination } = require('reconlx')
 module.exports = {
     name: "help",
     description: "help menu",
-    execute(_, message, args) {
+    run: async(_, message, args) => {
         const help1 = new MessageEmbed()
             .setColor("#ddbec3")
             .setTitle("help menu idk man")

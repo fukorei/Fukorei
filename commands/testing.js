@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'test',
     description: 'a place to test new commands before release',
-    execute(client, message, args, moment){
+    run: async(client, message, args, moment) => {
         const me = ["732043268946133133"]
 
         if(!me.includes(message.author.id)) return;
