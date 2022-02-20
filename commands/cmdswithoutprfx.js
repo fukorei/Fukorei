@@ -25,7 +25,7 @@ module.exports = {
             data2.afkreason = null
             data2.afk = false
             message.channel.send("oh, you're back, removed ur afk!")
-            message.member.setNickname(`${nickbfr.slice(0,6)}`)
+            message.member.setNickname(`${nickbfr.slice(6)}`)
             await data2.save()
         }
 
