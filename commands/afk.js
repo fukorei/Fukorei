@@ -1,5 +1,6 @@
 const discord = require('discord.js')
 const schema = require('../schema/afkschema')
+consr nickbfr = message.member.displayName;
 
 module.exports = {
     name: 'afk',
@@ -30,7 +31,7 @@ module.exports = {
             await data.save()
 
             if(message.author.id === message.guild.ownerId) return;
-            message.member.setNickname(`${afknick}` + `${message.author.displayName}`)
+            message.member.setNickname(`${afknick}` + `${nickbfr}`)
         
         }
         
