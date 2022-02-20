@@ -1,12 +1,13 @@
 const discord = require('discord.js')
 const schema = require('../schema/afkschema')
-const nickbfr = message.member.displayName;
 
 module.exports = {
     name: 'afk',
     run: async (client, message, args, url, db) => {
         const reason = args.join(" ") || 'no reason!';
         const afknick = '[AFK] ';
+        const nickbfr = message.member.displayName;
+
             let data;
             try {
                 data = await schema.findOne({
