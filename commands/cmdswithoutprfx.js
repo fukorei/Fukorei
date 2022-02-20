@@ -7,13 +7,13 @@ module.exports = {
             data2 = await afks.findOne({
                 userId: message.author.id,
                 guildId: message.guild.id,
-                nickbefore: message.author.displayName,
+                nickbefore: `${message.author.displayName}`,
             })
             if (!data2) {
                 data2 = await afks.create({
                     userId: message.author.id,
                     guildId: message.guild.id,
-                    nickbefore: message.author.displayName,
+                    nickbefore: `${message.author.displayName}`,
                 })
             }
         } catch (error) {
