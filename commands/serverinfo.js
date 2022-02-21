@@ -12,6 +12,10 @@ module.exports = {
         .addField("you joined discord at:", `${moment(message.author.createdAt).format('ddd, DD/MM/YYYY')}`)
         .addField("Total members count:", `${message.guild.memberCount}`)
         console.log(message.member.joinedAt)
+        .setFooter({
+            text: `requested by ${message.author?.username}#${message.author?.discriminator}`,
+            iconURL: client.user.displayAvatarURL()
+        })
         message.reply({ embeds: [serverinf] });
     }
 }

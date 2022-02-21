@@ -1,5 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const Discord = require('discord.js');
+const moment = require('moment');
 
 module.exports = {
     name: "user",
@@ -9,7 +10,11 @@ module.exports = {
             // .setAvatar(message.author.displayAvatarURL())
             .addField("Username:", `${message.author?.username}#${message.author?.discriminator}`)
             .addField("User ID:", `${message.author?.id}`)
-            .addField("Created At:", `${message.author?.createdAt.toDateString()}`)
+            .addField("Created At:", `${moment(message.author.createdAt).format('ddd, DD/MM/YYYY')}`)
+            .setFooter({
+                text: `requested by ${message.author?.username}#${message.author?.discriminator}`,
+                iconURL: client.user.displayAvatarURL()
+            })
         message.reply({ embeds: [userinfo] });
     }
 };
