@@ -8,7 +8,10 @@ module.exports = {
         const test = new Discord.MessageEmbed()
         .setColor("#ddbec3")
         .addField("test1", `this is a testbench`)
-        .setFooter(client.user.username, client.user.displayAvatarURL())
+        .setFooter({
+            text: `${client.user.username}`,
+            iconURL: client.user.displayAvatarURL()
+        })
     message.reply({ embeds: [test] });
         } 
 }
