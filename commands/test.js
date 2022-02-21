@@ -5,13 +5,10 @@ module.exports = {
     name: 'test',
     description: 'a place to test new commands before release',
     run: async(client, message, args, moment) => {
-        const test = new Discord.MessageEmbed()
-        .setColor("#ddbec3")
-        .addField("test1", `this is a testbench`)
-        .setFooter({
-            text: `${client.user.username}`,
-            iconURL: client.user.displayAvatarURL()
-        })
-    message.reply({ embeds: [test] });
-        } 
+        let botcount = 0;
+        if(user.bot){
+            botcount+=1;
+        }
+        message.channel.send(botcount)
+}
 }
