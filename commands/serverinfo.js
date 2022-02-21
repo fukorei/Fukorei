@@ -13,7 +13,7 @@ module.exports = {
         .addField("Total members count:", `${message.guild.memberCount}`)
         .setFooter({
             text: `requested by ${message.author?.username}#${message.author?.discriminator}`,
-            iconURL: client.user.displayAvatarURL()
+            iconURL: message.member.displayAvatarURL()
         })
         message.reply({ embeds: [serverinf] });
     }
