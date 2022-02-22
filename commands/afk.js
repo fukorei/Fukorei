@@ -13,20 +13,18 @@ module.exports = {
                 data = await schema.findOne({
                     userId: message.author.id,
                     guildId: message.guild.id,
-                    // nickbefore: `${message.member.displayName}`,
                 })
                 if(!data) {
                     data = await schema.create({
                         userId: message.author.id,
                         guildId: message.guild.id,
-                        // nickbefore: `${message.member.displayName}`,
                     })
                 }
             } catch(e) {
                 console.log(e)
             }
         
-            message.channel.send(`i set your afk: ${reason}`)
+            message.channel.send(` <@${message.author.id}> i set your afk: ${reason}`)
             data.afk = true
             data.afkreason = reason
             await data.save()

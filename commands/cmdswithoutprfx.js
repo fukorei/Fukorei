@@ -22,9 +22,9 @@ module.exports = {
         }
 
         if (data2.afk === true) {
+            message.reply(` <@${message.author.id}> oh, you're back, removed ur afk! you were previously afk for: ${data2.afkreason || 'no reason!'}`)
             data2.afkreason = null
             data2.afk = false
-            message.channel.send("oh, you're back, removed ur afk!")
             message.member.setNickname(`${nickbfr.slice(6)}`)
             await data2.save()
         }
@@ -47,7 +47,7 @@ module.exports = {
             }
 
             if(data3.afk === true){
-                message.reply(`${message.mentions.members.first()} is currently afk: ${data3.afkreason || 'no reason!'} `)
+                message.reply(`${message.mentions.members.first().displayName} is currently afk: ${data3.afkreason || 'no reason!'} `)
             }
         }
 
