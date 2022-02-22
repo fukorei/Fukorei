@@ -22,11 +22,13 @@ module.exports = {
         }
 
         if (data2.afk === true) {
-            message.reply(` <@${message.author.id}> oh, you're back, removed ur afk! you were previously afk for: ${data2.afkreason || 'no reason!'}`)
+            message.reply(`oh, you're back, removed ur afk! you were previously afk for: ${data2.afkreason || 'no reason!'}`)
             data2.afkreason = null
             data2.afk = false
-            message.member.setNickname(`${nickbfr.slice(6)}`)
             await data2.save()
+
+            if(message.author.id === message.guild.ownerId) return;
+            message.member.setNickname(`${nickbfr.slice(6)}`)
         }
 
         if(message.mentions.members.first()){
