@@ -92,7 +92,7 @@ module.exports = {
 
         else if (message.content.toLowerCase().startsWith("how much is")) {
             args.shift()
-            client.commands.get('maths').execute(client, message, args);
+            client.commands.get('maths').run(client, message, args);
         }
 
         // var sus = ["sú", "sus"]
