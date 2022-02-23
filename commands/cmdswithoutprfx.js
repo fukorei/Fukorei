@@ -140,5 +140,10 @@ module.exports = {
         if (cappa.includes(message.content.toLowerCase())) {
             message.channel.send('<:cappalul:944215825601146930>')
         }
+
+        var dmthgle = ["stop doing meths", "djt me thg le"]
+        if(dmthgle.includes(message.content.toLowerCase())){
+            message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/945941741347938314/unknown.png')
+        }
     }
 };
