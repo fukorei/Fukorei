@@ -93,8 +93,7 @@ module.exports = {
         }
 
         else if (message.content.toLowerCase().startsWith("how much is")) {
-            args.shift()
-            args.shift()
+            args.slice(0,2)
             client.commands.get('maths').run(client, message, args);
         }
 
