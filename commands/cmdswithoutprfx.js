@@ -147,9 +147,9 @@ module.exports = {
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/945941741347938314/unknown.png')
         }
 
-        var taoatce = ["tao át", "tao at", "tao ce"]
+        var taoatce = ["tao át", "tao at", "tao ce", "t at", "t át", "t ce"]
         if(taoatce.includes(message.content.toLowerCase())){
-            message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/950046506847699014/275222019_119257587176662_4936309023647812085_n.mp4')
+            message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/952923148326694973/taoat.mp4')
         }
     }
 };
