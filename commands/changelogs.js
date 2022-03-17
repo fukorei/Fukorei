@@ -1,7 +1,7 @@
 module.exports = {
     name: "changelogs",
     description: "give access to changelog content",
-    execute(client, message) {
+    run: async (message) => {
         if (message.member.roles.cache.some(role => role.name === 'segs changelog'))
             return message.reply('you already have access to the changelogs channel!');
 
