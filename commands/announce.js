@@ -6,7 +6,7 @@ module.exports = {
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR")) return;
 
         if(!args.length) return message.channel.send("what do you want me to announce <:mikewhat:806372341629976586>");
-        message.announcechannel.send(`@everyone` + args.join(" "));
+        announcechannel.send(`@everyone` + args.join(" "));
         message.delete()
     }
 }
