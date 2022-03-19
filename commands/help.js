@@ -6,9 +6,9 @@ module.exports = {
     description: "help menu",
     run: async(client, message, args) => {
         if(args[0] === "airlines"){
-            if(!message.guild.id === "606112569622659072"){
+            if(!message.guild.id == "606112569622659072"){
                 return message.reply ("you shall not have access to enter the secret commands of me!");
-            }
+            } else {
             const help1 = new MessageEmbed()
                 .setColor("#ddbec3")
                 .setTitle("help menu idk man")
@@ -34,7 +34,10 @@ module.exports = {
                 author: message.author,
                 time: 30000,
             })
+            }
+
         } else {
+            
             const help3 = new MessageEmbed()
             .setColor("#ddbec3")
             .setTitle("Help menu")
