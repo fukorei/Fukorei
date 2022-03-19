@@ -2,6 +2,9 @@ module.exports = {
     name: "spamqa",
     run: async(client, message, args) => {
         if (message.author.bot) return;
+        if(!message.guild.id === 606112569622659072){
+            return message.reply ("you shall not have access to this command!")
+        }
 
         if (!message.member.permissionsIn(message.channel).has("ADMINISTRATOR"))
             return message.reply('mày làm gì có tuổi ping <:lul:806387931606024232>')

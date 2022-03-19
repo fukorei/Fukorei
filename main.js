@@ -27,7 +27,6 @@ for (const file of commandFiles) {
 client.on("ready", async () => {
     if (!url) return;
     await mongoose.connect(url, {
-        //useFindAndModify: false,
         useUnifiedTopology: true,
         useNewUrlParser: true,
         keepAlive: true,

@@ -53,6 +53,39 @@ module.exports = {
             }
         }
 
+        let allowedid = ["732043268946133133"]
+        if (message.content.toLowerCase().startsWith("khóa miệng thằng này cho bố")) {
+            let mentioneduser = message.mentions.members.first();
+
+            if (!allowedid.includes(message.author.id)) {
+                return message.reply('chỉ bố tao mới được ra lệnh cho tao nhé thằng ngu!')
+            }
+
+            if (!mentioneduser) {
+                return message.reply('nhớ ping thằng bố muốn mute =))')
+            }
+
+            mentioneduser.timeout(ms('5m'));
+            message.reply(`con đã timeout ${mentioneduser} trong 5 phút ạ!`);
+        }
+
+        const congaioi = ["con gái", "con gái ơi", "con gái ui"]
+        if (congaioi.includes(message.content.toLowerCase())) {
+            if (!allowedid.includes(message.author.id)) return;
+            message.reply("dạ");
+        }
+
+        var taoatce = ["tao át", "tao at", "tao ce", "t at", "t át", "t ce"]
+        if(taoatce.includes(message.content.toLowerCase())){
+            message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/952923148326694973/taoat.mp4')
+        }
+
+
+
+
+        //airlines custom commands from here onwards:
+        if(!message.guild.id === 606112569622659072) return;
+
         const ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
         if (ghevs.includes(message.content.toLowerCase())) {
             message.channel.send('🪑👗⭐🤨')
@@ -98,44 +131,10 @@ module.exports = {
             client.commands.get('maths').run(client, message, args);
         }
 
-        // var sus = ["sú", "sus"]
-        // if(sus.includes(message.content.toLowerCase())){
-        //     message.channel.send('ඞ')
-        // }
-
         var sautettdi = ["sau tết t đi"]
         if (sautettdi.includes(message.content.toLowerCase())) {
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/941299164447383582/unknown.png')
         }
-
-
-        let allowedid = ["732043268946133133"]
-        if (message.content.toLowerCase().startsWith("khóa miệng thằng này cho bố")) {
-            let mentioneduser = message.mentions.members.first();
-
-            if (!allowedid.includes(message.author.id)) {
-                return message.reply('chỉ bố tao mới được ra lệnh cho tao nhé thằng ngu!')
-            }
-
-            if (!mentioneduser) {
-                return message.reply('nhớ ping thằng bố muốn mute =))')
-            }
-
-            mentioneduser.timeout(ms('5m'));
-            message.reply(`con đã timeout ${mentioneduser} trong 5 phút ạ!`);
-        }
-
-        const congaioi = ["con gái", "con gái ơi", "con gái ui"]
-        if (congaioi.includes(message.content.toLowerCase())) {
-            if (!allowedid.includes(message.author.id)) return;
-            message.reply("dạ");
-        }
-
-        // else if (message.content.toLowerCase().startsWith("folon")) {
-        //     const customfolon = message.content.slice(5).toLowerCase()
-        //     if (message.content.length === 5) return;
-        //     message.channel.send(`Quá ghê gớm....🌚😳\nVà đây là Folon${customfolon}!😱😱\nFolon${customfolon} ui... 🥶🥶👿😳một tình huống múa phải nói là cực 👿gắt!!\n*music🤯\nThẹn thùng nhìn em quay gót đi mãi😞😞💔\nAnh đứng chết lặng trong mưa😭😭\nDù rằng bên😊😊 em đã có ai\nNhưng nơi đây anh 🤗🤗🥱vẫn còn chờ...`)
-        // }
 
         let cappa = ["cappa", "cappalul"]
         if (cappa.includes(message.content.toLowerCase())) {
@@ -145,11 +144,6 @@ module.exports = {
         var dmthgle = ["stop doing meths", "djt me thg le"]
         if(dmthgle.includes(message.content.toLowerCase())){
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/945941741347938314/unknown.png')
-        }
-
-        var taoatce = ["tao át", "tao at", "tao ce", "t at", "t át", "t ce"]
-        if(taoatce.includes(message.content.toLowerCase())){
-            message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/952923148326694973/taoat.mp4')
         }
     }
 };

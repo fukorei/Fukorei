@@ -14,6 +14,9 @@ module.exports = {
     name: "fischl",
     description: "rip le",
     run: async(_, message) => {
+        if(!message.guild.id === 606112569622659072){
+            return message.reply ("you shall not have access to this command!")
+        }
         const randomfischl = fischl[Math.floor(Math.random() * fischl.length)];
         message.channel.send(randomfischl)
     }
