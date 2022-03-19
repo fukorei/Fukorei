@@ -88,7 +88,7 @@ module.exports = {
         }
 
         else if(command === 'announce'){
-            client.commands.get('test').run(client, message, args);
+            client.commands.get('announce').run(client, message, args);
         }
     }
 }
