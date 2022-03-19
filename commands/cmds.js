@@ -84,7 +84,11 @@ module.exports = {
         }
 
         else if(command === 'test'){
-            client.commands.get('test').run(client, message, args, moment);
+            client.commands.get('test').run(client, message, args, ms);
+        }
+
+        else if(command === 'announce'){
+            client.commands.get('test').run(client, message, args);
         }
     }
 }
