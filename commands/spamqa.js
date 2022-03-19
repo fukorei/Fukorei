@@ -2,7 +2,7 @@ module.exports = {
     name: "spamqa",
     run: async(client, message, args) => {
         if (message.author.bot) return;
-        if(!message.guild.id === 606112569622659072){
+        if(!message.guild.id === "606112569622659072"){
             return message.reply ("you shall not have access to this command!")
         }
 

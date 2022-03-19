@@ -84,7 +84,7 @@ module.exports = {
 
 
         //airlines custom commands from here onwards:
-        if(!message.guild.id === 606112569622659072) return;
+        if(!message.guild.id === "606112569622659072") return;
 
         const ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
         if (ghevs.includes(message.content.toLowerCase())) {
