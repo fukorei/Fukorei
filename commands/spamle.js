@@ -4,8 +4,8 @@ module.exports = {
     name: "spamle",
     run: async(client, message, args) => {
         if (message.author.bot) return;
-        if(!message.guild.id === "606112569622659072"){
-            return message.reply ("you shall not have access to this command!")
+        if(message.guild.id !== '606112569622659072'){
+            return message.reply ("you shall not have access to enter the secret commands of me!");
         }
 
         if (!ALLOWED_MEMBERS.includes(message.author.id))
