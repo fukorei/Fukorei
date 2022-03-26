@@ -14,7 +14,7 @@ module.exports = {
             .addField("Created At:", `${moment(user.createdAt).format('ddd, DD/MM/YYYY')}`)
             .setFooter({
                 text: `requested by ${message.author.username}#${message.author.discriminator}`,
-                iconURL: user.displayAvatarURL()
+                iconURL: message.author.displayAvatarURL()
             })
         message.reply({ embeds: [userinfo] });
     }
