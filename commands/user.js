@@ -5,15 +5,16 @@ const moment = require('moment');
 module.exports = {
     name: "user",
     run: async(client, message) => {
+        const user = message.mentions.users.first() || message.author;
         const userinfo = new Discord.MessageEmbed()
             .setColor("#ddbec3")
             // .setAvatar(message.author.displayAvatarURL())
-            .addField("Username:", `${message.author?.username}#${message.author?.discriminator}`)
-            .addField("User ID:", `${message.author?.id}`)
-            .addField("Created At:", `${moment(message.author.createdAt).format('ddd, DD/MM/YYYY')}`)
+            .addField("Username:", `${user.username}#${user.discriminator}`)
+            .addField("User ID:", `${user.id}`)
+            .addField("Created At:", `${moment(user.createdAt).format('ddd, DD/MM/YYYY')}`)
             .setFooter({
-                text: `requested by ${message.author?.username}#${message.author?.discriminator}`,
-                iconURL: message.member.displayAvatarURL()
+                text: `requested by ${user.username}#${user.discriminator}`,
+                iconURL: user.displayAvatarURL()
             })
         message.reply({ embeds: [userinfo] });
     }
