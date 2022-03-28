@@ -10,7 +10,7 @@ module.exports = {
             case "commands":
                 return message.reply('here are the commands .js files:\n<https://github.com/arizl/Fukorei/tree/main/commands>')
             default:
-                return message.reply('missing component (ex: Fukorei github main)')
+                return message.reply('missing component (ex: f github main)')
         }
     }
 }
