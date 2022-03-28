@@ -11,7 +11,7 @@ const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: new Intents(32767) });
 const url = process.env.mongooseConnectionString;
 const db = new Database(url);
-const prefix = ['f ', 'fuko '];
+const prefix = ['f ', 'fuko ', 'fukorei'];
 
 client.commands = new Collection();
 client.emitters = { client };
