@@ -45,7 +45,7 @@ client.on("messageCreate", async (message) => {
     const blarr = ["606409312411058176"];
     if (blarr.includes(message.author.id)) return;
 
-    if (!message.content.toLowerCase().startsWith(prefix)) {
+    if(!prefix.find(p=>message.content.toLowerCase().startsWith(p))) {
         client.commands.get('cmdswithoutprfx').run(client, message, args, ms, afks);
     } else {
         client.commands.get('cmds').run(client, message, args, prefix, ms, command, moment, url, db);
