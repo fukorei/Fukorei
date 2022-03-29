@@ -36,12 +36,15 @@ client.on("ready", async () => {
 });
 
 client.on("messageCreate", async (message) => {
-    let prefixes = ["f ", "fuko "]
+    let prefixes = ["f ", "fuko "];
     let prefix = prefixes[
       prefixes.findIndex((p) => message.content.toLowerCase().startsWith(p))
     ];
-    const args = message.content.slice(prefixes.length).split(/ +/);
-    const command = args.shift().toLowerCase();
+    const [command, ...args] = message.content
+      .toLowerCase()
+      .slice(prefix.length)
+      .trim()
+      .split(/ +/g);
 
     if (message.author.bot) return;
 
