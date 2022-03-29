@@ -37,6 +37,10 @@ client.on("ready", async () => {
 });
 
 client.on("messageCreate", async (message) => {
+    let prefixes = ["f ", "fuko "]
+    let prefix = prefixes[
+      prefixes.findIndex((p) => message.content.toLowerCase().startsWith(p))
+    ];
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
