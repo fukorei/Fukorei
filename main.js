@@ -40,11 +40,8 @@ client.on("messageCreate", async (message) => {
     let prefix = prefixes[
       prefixes.findIndex((p) => message.content.toLowerCase().startsWith(p))
     ];
-    const [command, ...args] = message.content
-      .toLowerCase()
-      .slice(prefix.length)
-      .trim()
-      .split(/ +/g);
+    const args = message.content.slice(prefixes.length).split(/ +/);
+    const command = args.shift().toLowerCase();
 
     if (message.author.bot) return;
 
