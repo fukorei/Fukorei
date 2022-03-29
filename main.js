@@ -11,7 +11,6 @@ const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: new Intents(32767) });
 const url = process.env.mongooseConnectionString;
 const db = new Database(url);
-const prefix = ('f ');
 
 client.commands = new Collection();
 client.emitters = { client };
@@ -41,7 +40,7 @@ client.on("messageCreate", async (message) => {
     let prefix = prefixes[
       prefixes.findIndex((p) => message.content.toLowerCase().startsWith(p))
     ];
-    const args = message.content.slice(prefix.length).split(/ +/);
+    const args = message.content.slice(prefixes.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     if (message.author.bot) return;
