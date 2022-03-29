@@ -11,10 +11,7 @@ const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: new Intents(32767) });
 const url = process.env.mongooseConnectionString;
 const db = new Database(url);
-let prefixes = ["f", "fuko"]
-let prefix = prefixes[
-  prefixes.findIndex((p) => message.content.toLowerCase().startsWith(p))
-];
+const prefix = ('f ');
 
 client.commands = new Collection();
 client.emitters = { client };
@@ -48,7 +45,7 @@ client.on("messageCreate", async (message) => {
     const blarr = ["606409312411058176"];
     if (blarr.includes(message.author.id)) return;
 
-    if (!message.content.startsWith(prefix)) {
+    if (!message.content.toLowerCase().startsWith(prefix)) {
         client.commands.get('cmdswithoutprfx').run(client, message, args, ms, afks);
     } else {
         client.commands.get('cmds').run(client, message, args, prefix, ms, command, moment, url, db);
