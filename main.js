@@ -38,7 +38,7 @@ client.on("ready", async () => {
 client.on("messageCreate", async (message) => {
     const prefix = ['f ', 'fuko ', 'f\\.'];
     const regexp = new RegExp('^(?:' + prefix.join('|') + ')\\b');
-    const args = message.content.slice(prefixes.length).split(/ +/);
+    const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     if (message.author.bot) return;
