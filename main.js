@@ -36,10 +36,8 @@ client.on("ready", async () => {
 });
 
 client.on("messageCreate", async (message) => {
-    let prefixes = ["f ", "fuko "];
-    let prefix = prefixes[
-      prefixes.findIndex((p) => message.content.toLowerCase().startsWith(p))
-    ];
+    const prefix = ['f ', 'fuko ', 'f\\.'];
+    const regexp = new RegExp('^(?:' + prefix.join('|') + ')\\b');
     const args = message.content.slice(prefixes.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
@@ -48,10 +46,10 @@ client.on("messageCreate", async (message) => {
     const blarr = ["606409312411058176"];
     if (blarr.includes(message.author.id)) return;
 
-    if (!message.content.toLowerCase().startsWith(prefix)) {
-        client.commands.get('cmdswithoutprfx').run(client, message, args, ms, afks);
-    } else {
+    if (regexp.test(message.content)) {
         client.commands.get('cmds').run(client, message, args, prefix, ms, command, moment, url, db);
+    } else {
+        client.commands.get('cmdswithoutprfx').run(client, message, args, ms, afks);
     }
 
 
