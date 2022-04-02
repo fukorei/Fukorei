@@ -8,6 +8,8 @@ module.exports = {
             return message.reply ("you shall not have access to this command!");
         }
 
+        message.reply(`${message.guild.createdAt}`);
+
         // const reason = args.slice(1).join(" ") || "no reason!";
         // const remind = ms(`${args[0]}`);
         // const currenttime = Date.now();
