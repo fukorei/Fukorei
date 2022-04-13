@@ -6,14 +6,17 @@ const { pagination } = require('reconlx')
 module.exports = {
     name: 'test',
     run: async(client, message, args, ms) => {
-        if(!message.author.id === 732043268946133133) {
+        if(message.author.id !== '732043268946133133') {
             return message.reply ("you shall not have access to this command!");
         }
 
-        const lg1 = new MessageEmbed()
-        .setColor("#ddbec3")
-        .setTitle("cos đối - sin bù - phụ chéo - khác pi tan")
-        .setImage("https://media.discordapp.net/attachments/606112569622659076/963795875744866354/dmlg1.png?width=319&height=405")
+        if(message.members.voice) {
+            message.members.voice.channel.setName('test')
+            message.reply('channel name is now test')
+        } else {
+            let channel = message.channel
+            channel.setName('test')
+        }
 
         message.reply({ embeds: [lg1] });
     }
