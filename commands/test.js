@@ -10,8 +10,8 @@ module.exports = {
             return message.reply ("you shall not have access to this command!");
         }
 
-        if(message.members.voice) {
-            message.members.voice.channel.setName('test')
+        if(message.member.voice) {
+            message.member.voice.channel.setName('test')
             message.reply('channel name is now test')
         } else {
             let channel = message.channel
