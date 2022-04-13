@@ -10,14 +10,14 @@ module.exports = {
             return message.reply ("you shall not have access to this command!");
         }
 
+        let newname = args.join(" ")
         if(message.member.voice) {
-            message.member.voice.channel.setName('test')
-            message.reply('channel name is now test')
+            message.member.voice.channel.setName(`${newname}`)
+            message.reply(`channel name changed to ${newname}`)
         } else {
             let channel = message.channel
-            channel.setName('test')
+            channel.setName(`${newname}`)
+            message.reply(`channel name changed to ${newname}`)
         }
-
-        message.reply({ embeds: [lg1] });
     }
 }
