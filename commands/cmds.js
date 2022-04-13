@@ -90,5 +90,10 @@ module.exports = {
         else if(command === 'announce'){
             client.commands.get('announce').run(client, message, args);
         }
+
+        const lg = ["luonggiac", "lg"]
+        if(lg.includes(command)){
+            client.commands.get('luonggiac').run(message);
+        }
     }
 }
