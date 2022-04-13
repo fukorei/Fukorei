@@ -18,15 +18,29 @@ module.exports = {
         const lg3 = new MessageEmbed()
         .setColor("#ddbec3")
         .setTitle("công thức tổng hiệu")
-        .setDescription(`sin tổng = sincos+cossin\nsin hiệu = sincos-cossin\ncos tổng = coscos-sinsin\ncos hiệu=coscos+sinsin\ntan tổng = tổng tan/1- tích tan\ntan hiệu =hiệu tan/1+tích tan`)
+        .setDescription(`sin tổng = sincos+cossin\nsin hiệu = sincos-cossin\ncos tổng = coscos-sinsin\ncos hiệu = coscos+sinsin\ntan tổng = tổng tan/1- tích tan\ntan hiệu = hiệu tan/1+tích tan`)
     
         const send = [lg1, lg2, lg3];
-
-        pagination({
+        
+    if(!args[0]){
+        return pagination({
             embeds: send,
             channel: message.channel,
             author: message.author,
             time: 30000,
-        })
+        });
+    } 
+
+    if(args[0] === '1'){
+        return message.reply({ embeds: [lg1] });
     }
+
+    if(args[0] === '2'){
+        return message.reply({ embeds: [lg2] });
+    }
+
+    if(args[0] === '3'){
+        return message.reply({ embeds: [lg3] });
+    }
+}
 }
