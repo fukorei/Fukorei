@@ -80,9 +80,9 @@ module.exports = {
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/952923148326694973/taoat.mp4')
         }
 
-        var luonggiac = ["djt me luong giac", "dmlg", "dm luong giac","đjt mẹ lượng giác","đm lượng giác"]
+        var luonggiac = ["djt me luong giac", "dmlg", "dm luong giac","đjt mẹ lượng giác", "đm lượng giác"]
         if(luonggiac.includes(message.content.toLowerCase())){
-            client.commands.get('luonggiac').run(message, args)
+            client.commands.get('luonggiac').run(message, args);
         }
 
 
