@@ -1,5 +1,7 @@
 const discord = require('discord.js')
 const schema = require('../schema/afkschema')
+const { MessageEmbed } = require('discord.js');
+const { pagination } = require('reconlx')
 
 module.exports = {
     name: 'test',
