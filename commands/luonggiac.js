@@ -4,7 +4,7 @@ const { pagination } = require('reconlx')
 
 module.exports = {
     name: 'luonggiac',
-    run: async (message) => {
+    run: async (message, args) => {
         const lg1 = new MessageEmbed()
         .setColor("#ddbec3")
         .setTitle("cơ bản")

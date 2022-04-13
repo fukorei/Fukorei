@@ -93,7 +93,7 @@ module.exports = {
 
         const lg = ["luonggiac", "lg"]
         if(lg.includes(command)){
-            client.commands.get('luonggiac').run(message);
+            client.commands.get('luonggiac').run(message, args);
         }
     }
 }
