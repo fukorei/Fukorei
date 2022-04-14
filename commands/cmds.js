@@ -95,5 +95,13 @@ module.exports = {
         if(lg.includes(command)){
             client.commands.get('luonggiac').run(message, args);
         }
+
+        else if(command === 'setname'){
+            client.commands.get('setname').run(message, args);
+        }
+
+        else if(command === 'request'){
+            client.commands.get('request').run(client, message, args);
+        }
     }
 }
