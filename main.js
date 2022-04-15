@@ -45,7 +45,7 @@ client.on("messageCreate", async (message) => {
 
     if (message.author.bot) return;
 
-    const blarr = ["606409312411058176"];
+    const blarr = ["606409312411058176", "763366076967813160"];
     if (blarr.includes(message.author.id)) return;
 
     if (!message.content.toLowerCase().startsWith(prefix)) {
