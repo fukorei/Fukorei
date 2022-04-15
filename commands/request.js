@@ -7,5 +7,6 @@ module.exports = {
         client.users.fetch('732043268946133133', false).then((user) => {
             user.send(`user ${author} with id: ${authorid} requested:\n${content}`);
         });
+        message.reply("your request has been sent to the bot dev. thank you.");
     }
 }
