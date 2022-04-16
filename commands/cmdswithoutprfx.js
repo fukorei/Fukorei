@@ -153,7 +153,7 @@ module.exports = {
 
         var unikey = ["dmm unikey", "unikey", "unikey đâu thằng lồn", "unikey đâu thg loz"]
         if(unikey.includes(message.content.toLowerCase())){
-            for (let i = 0; i<=5; i++){
+            for (let i = 0; i<5; i++){
             message.channel.send("https://www.unikey.org/")
             }
         }
