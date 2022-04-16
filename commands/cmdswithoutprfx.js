@@ -141,7 +141,7 @@ module.exports = {
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/941299164447383582/unknown.png')
         }
 
-        let cappa = ["cappa", "cappalul"]
+        var cappa = ["cappa", "cappalul"]
         if (cappa.includes(message.content.toLowerCase())) {
             message.channel.send('<:cappalul:944215825601146930>')
         }
@@ -149,6 +149,13 @@ module.exports = {
         var dmthgle = ["stop doing meths", "djt me thg le"]
         if(dmthgle.includes(message.content.toLowerCase())){
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/945941741347938314/unknown.png')
+        }
+
+        var unikey = ["dmm unikey", "unikey", "unikey đâu thằng lồn", "unikey đâu thg loz"]
+        if(unikey.includes(message.content.toLowerCase())){
+            for (let i = 0; i<=5; i++){
+            message.channel.send("https://www.unikey.org/")
+            }
         }
     }
 };
