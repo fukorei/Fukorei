@@ -10,16 +10,7 @@ module.exports = {
             return message.reply ("you shall not have access to this command!");
         }
 
-        let channel = message.member.voice.channel;
-        let newname = args.join(" ")
-        if(!newname) return message.reply("you need to specify a new name!")
-        if(!channel){
-        let msgchannel = message.channel
-        msgchannel.setName(`${newname}`)
-        message.reply(`channel name changed to ${newname}`)
-        }
-        message.member.voice.channel.setName(`${newname}`)
-        message.reply(`channel name changed to ${newname}`)
+        message.reply(`${Math.floor(Math.random() * args.length)}`);
     }
 }
 
