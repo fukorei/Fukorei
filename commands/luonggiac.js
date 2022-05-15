@@ -13,7 +13,7 @@ module.exports = {
         const lg2 = new MessageEmbed()
         .setColor("#ddbec3")
         .setTitle("cos đối - sin bù - phụ chéo - khác pi tan")
-        .setImage("https://media.discordapp.net/attachments/606112569622659076/963795875744866354/dmlg1.png?width=319&height=405")
+        .setImage("https://discord.com/channels/606112569622659072/606112569622659076/970688382495776889")
 
         const lg3 = new MessageEmbed()
         .setColor("#ddbec3")
