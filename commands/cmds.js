@@ -103,5 +103,9 @@ module.exports = {
         else if(command === 'request'){
             client.commands.get('request').run(client, message, args);
         }
+
+        else if(command === 'pick'){
+            client.commands.get('pick').run(message, args);
+        }
     }
 }
