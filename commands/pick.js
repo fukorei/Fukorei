@@ -3,6 +3,7 @@ module.exports = {
     run: async (message, args) => {
     if(!args) return message.reply ("you must provide arguments!");
     console.log(args);
-    message.reply(`i choose `+`${Math.floor(Math.random() * args.length)}`);
+    const pick = args[Math.floor(Math.random() * args.length)];
+    message.reply(`i choose `+`${pick}`);
     }
 }
