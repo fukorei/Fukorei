@@ -10,7 +10,7 @@ module.exports = {
             return message.reply ("you shall not have access to this command!");
         }
 
-        message.reply(`${Math.floor(Math.random() * args.length)}`);
+        message.reply(`i choose`+`${Math.floor(Math.random() * args.length)}`);
     }
 }
 
