@@ -5,11 +5,11 @@ module.exports = {
 
     console.log(args);
     let pickargs = message.content;
-    pickargs.forEach{
+    pickargs.forEach(index => {
         if(index === "|"){
             pickargs.slice(0, index);
         }
-    }
+    })
     console.log(pickargs);
 
     const pick = args[Math.floor(Math.random() * args.length)];
