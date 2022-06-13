@@ -10,8 +10,8 @@ module.exports = {
     
         console.log(args);
         let pickargs = message.content;
-        args.ForEach(element => {
-            if(!element === "|"){
+        args.ForEach(index => {
+            if(!index === "|"){
                 const pick = args[Math.floor(Math.random() * args.length)];
                 return message.reply(`i choose `+`${pick}`);
             }
