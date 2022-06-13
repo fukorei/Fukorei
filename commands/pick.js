@@ -5,11 +5,10 @@ module.exports = {
 
     console.log(args);
     let pickargs = message.content;
-    for (let i = 0; i < args.length; i++) {
-        if(pickargs[i]==="|"){
-            pickargs.split
-        }
-    }
+    args.ForEach(element => {
+        if(!element === "|") return message.reply("provide args with |");
+        
+    })
     console.log(pickargs);
     const pick = args[Math.floor(Math.random() * args.length)];
     message.reply(`i choose `+`${pick}`);
