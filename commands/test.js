@@ -9,7 +9,7 @@ module.exports = {
         if(!args[0]) return message.reply ("you must provide arguments!");
     
         console.log(args);
-        let pickargs = message.content;
+        let pickargs = message.content.slice(6);
         args.forEach(index => {
             if(!index === "|"){
                 const pick = args[Math.floor(Math.random() * args.length)];
