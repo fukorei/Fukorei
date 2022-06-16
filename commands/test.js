@@ -10,17 +10,21 @@ module.exports = {
     
         console.log(args);
         let pickargs = message.content.slice(6);
-        args.forEach(index => {
-            if(!index === "|"){
-                const pick = args[Math.floor(Math.random() * args.length)];
-                return message.reply(`i choose `+`${pick}`);
-            }
-            
+        if (pickargs.includes(',')){
+            pickargs.split(",")
+            const pick = pickargs[Math.floor(Math.random() * args.length)];
+            console.log(pickargs);
+            return message.reply(`i choose `+`${pick}`);
+        }
+
+        if (pickargs.includes('|')){
             pickargs.split("|")
             const pick = pickargs[Math.floor(Math.random() * args.length)];
+            console.log(pickargs);
             return message.reply(`i choose `+`${pick}`);
-        })
-        console.log(pickargs);
         }
-}
 
+        const pick = args[Math.floor(Math.random() * args.length)];
+        return message.reply(`i choose `+`${pick}`);
+}
+}
