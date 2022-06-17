@@ -2,7 +2,6 @@ module.exports = {
     name: 'pick',
     run: async (message, args) => {
         if(!args[0]) return message.reply ("you must provide arguments!");
-        console.log(args);
         
         let pickargs = message.content.slice(7)
         let newpickargs = pickargs.includes("|") ? pickargs.split("|") : pickargs.includes(",") ? pickargs.split(",") : pickargs.split(/ +/g);
