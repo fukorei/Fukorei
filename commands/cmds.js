@@ -6,7 +6,8 @@ module.exports = {
             client.commands.get('ping').run(message, args);
         }
     
-        else if(command === 'user'){
+        const user = ["userinf", "userinfo", "user"]
+        if(user.includes(command)){
             client.commands.get('user').run(client, message, args);
         }
     
