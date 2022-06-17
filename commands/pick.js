@@ -1,16 +1,13 @@
 module.exports = {
     name: 'pick',
     run: async (message, args) => {
-    if(!args[0]) return message.reply ("you must provide arguments!");
-
-    console.log(args);
-    let pickargs = message.content;
-    args.ForEach(element => {
-        if(!element === "|") return message.reply("provide args with |");
+        if(!args[0]) return message.reply ("you must provide arguments!");
+        console.log(args);
         
-    })
-    console.log(pickargs);
-    const pick = args[Math.floor(Math.random() * args.length)];
-    message.reply(`i choose `+`${pick}`);
+        let pickargs = message.content.slice(6)
+        let newpickargs = pickargs.includes("|") ? pickargs.split("|") : pickargs.includes(",") ? pickargs.split(",") : pickargs.split(/ +/g);
+        
+        const pick = newpickargs[Math.floor(Math.random() * newpickargs.length)];
+        return message.reply({content: `i choose${pick}`})
     }
 }
