@@ -3,7 +3,7 @@ module.exports = {
     run: async(client, message, args) => {
         let ping = message.mentions.users.first();
         if(message.author.bot) return;
-        if(!message.member.permissionsIn(message.channel).has("ADMINISTRATOR"))
+        if(!message.member.permissionsIn(message.channel).has("ADMINISTRATOR") || message.author !== ping)
             return message.reply('mày làm gì có tuổi ping <:lul:806387931606024232>')
 
         if (Number.isNaN(+args[0]))
