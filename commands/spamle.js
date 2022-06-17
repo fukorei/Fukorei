@@ -1,23 +1,18 @@
-const ALLOWED_MEMBERS = ["840145281806368798", "732043268946133133", "480288826187710464"]
-
 module.exports = {
-    name: "spamle",
+    name: "spam",
     run: async(client, message, args) => {
-        if (message.author.bot) return;
-        if(message.guild.id !== '606112569622659072'){
-            return message.reply ("you shall not have access to enter the secret commands of me!");
-        }
-
-        if (!ALLOWED_MEMBERS.includes(message.author.id))
-            return message.reply('mày làm gì có tuổi ping <:lul:806387931606024232>');
+        let ping = message.mentions.users.first();
+        if(message.author.bot) return;
+        if(!message.member.permissionsIn(message.channel).has("ADMINISTRATOR"))
+            return message.reply('mày làm gì có tuổi ping <:lul:806387931606024232>')
 
         if (Number.isNaN(+args[0]))
             return message.reply('that is not a valid amount of times to ping!')
 
-        if (+args[0] >= 25)
+        if (+args[0] > 25)
             return message.reply('listen man im hosted on heroku stop tf is wrong with you <:mikewhat:806372341629976586> ')
 
         for (let i = 0; i < +args[0]; i++)
-            message.channel.send('<@840145281806368798>')
+            message.channel.send(`<@${ping.id}>`)
     }
 }

@@ -29,10 +29,6 @@ module.exports = {
         else if(command === 'horny'){
             message.channel.send('UUUUUUUUWWWWWWWWWWOOOOOOOOOOOOOOOOOOGAAAAAJHGASJDHGASJHGDSSSSSSSSSSSSSSSSEEEEEEEEEEEEEEEEEEEEEEEEEEEGGGGGGGGGGGGGGGGGGGGGGGSSSSSSSSSSSSSSSSSSS');
         }
-    
-        else if(command === 'spamqa'){
-            client.commands.get('spamqa').run(client, message, args, prefix);
-        }
             
         else if(command === 'sadge'){
             message.channel.send('<:pepe_sadge:929713686615052298>')
@@ -62,8 +58,8 @@ module.exports = {
             client.commands.get('say').run(client, message, args);
         }
     
-        else if(command === 'spamle'){
-            client.commands.get('spamle').run(client, message, args, prefix);
+        else if(command === 'spam'){
+            client.commands.get('spam').run(client, message, args);
         }
     
         else if(command === 'maths'){
