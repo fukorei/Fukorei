@@ -10,10 +10,9 @@ module.exports = {
         const serverinf = new MessageEmbed()
         .setColor("#ddbec3")
         .setTitle(`server info for ${message.guild.name}`)
-        .addField("created at:", `${moment(message.guild.createdAt).format('ddd, DD/MM/YYYY')}`)
+        .addField("created at:", `${moment(message.guild.createdAt)}`)
         .addField("you joined the server at:", `${moment(message.member.joinedAt).format('ddd, DD/MM/YYYY')}`)
-        .addField("you joined discord at:", `${moment(message.author.createdAt).format('ddd, DD/MM/YYYY')}`)
-        .addField("Total members count:", `${message.guild.memberCount-botcount} (${botcount} bots)`)
+        .addField("total members count:", `${message.guild.memberCount-botcount} (${botcount} bots)`)
         .setFooter({
             text: `requested by ${message.author?.username}#${message.author?.discriminator}`,
             iconURL: message.member.displayAvatarURL()
