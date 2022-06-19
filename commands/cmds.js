@@ -105,8 +105,8 @@ module.exports = {
             client.commands.get('pick').run(message, args);
         }
 
-        else if(command === 'developer'){
-            client.commands.get('developer').run(client, message, args);
+        else if(command === 'dev'){
+            client.commands.get('dev').run(client, message, args);
         }
     }
 }
