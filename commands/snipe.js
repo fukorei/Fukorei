@@ -1,5 +1,5 @@
-module.exports = {
-    name: "snipe",
-    run: async (client, message, args) => {
-        
-}
+// module.exports = {
+//     name: "snipe",
+//     run: async (client, message, args) => {
+
+// }
