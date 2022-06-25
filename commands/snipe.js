@@ -7,7 +7,7 @@ module.exports = {
         if(!msg) return message.channel.send('no message deleted')
 
         const embed = new MessageEmbed()
-        .setTitle(`<@${msg.author}> said:`)
+        .setTitle(`${msg.author} said:`)
         .setColor("#ddbec3")
         .setDescription(`${msg.message}`)
         .setTimestamp(msg.createdAt)
