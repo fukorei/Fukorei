@@ -59,7 +59,7 @@ client.on("messageCreate", async (message) => {
 });
 
 
-client.on("messageDelete", async(message){
+client.on("messageDelete", async(message) => {
     client.snipes.set(message.channel.id, {
         message: message.content,
         author: message.author.id,
