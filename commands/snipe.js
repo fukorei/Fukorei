@@ -7,7 +7,7 @@ module.exports = {
         if(!msg) return message.channel.send('no message deleted')
 
         const embed = new MessageEmbed()
-        .setDescription(`${msg.author} said: ${msg.content}`)
+        .setDescription(`<@${msg.author}> said: ${msg.message}`)
         .setTimestamp(msg.createdAt)
         
         if(msg.image) embed.setImage(msg.image)
