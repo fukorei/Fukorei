@@ -7,10 +7,13 @@ module.exports = {
         if(!msg) return message.channel.send('no message deleted')
 
         const embed = new MessageEmbed()
-        .setTitle(`${msg.author} said:`)
+        .setTitle(`${msg.author.username} said:`)
         .setColor("#ddbec3")
         .setDescription(`${msg.message}`)
-        .setTimestamp(msg.createdAt)
+        .setFooter({
+            text: `${msg.createdAt}`,
+            iconURL: msg.author.displayAvatarURL()
+        })
         
         if(msg.image) embed.setImage(msg.image)
         message.channel.send({embeds: [embed]})

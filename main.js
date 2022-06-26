@@ -62,7 +62,7 @@ client.on("messageCreate", async (message) => {
 client.on("messageDelete", function(message) {
     client.snipes.set(message.channel.id, {
         message: message.content,
-        author: message.author.username,
+        author: message.author,
         image: message.attachments.first() ? message.attachments.first().proxyURL : null,
     })
 })
