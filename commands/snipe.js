@@ -13,7 +13,7 @@ module.exports = {
         .setDescription(`${msg.message}`)
         .setTimestamp(msg.createdAt)
         .setFooter({
-            text: `Today at`,
+            text: ``,
             iconURL: msg.author.displayAvatarURL()
         })
         
