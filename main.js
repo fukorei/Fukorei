@@ -63,6 +63,7 @@ client.on("messageDelete", function(message) {
     client.snipes.set(message.channel.id, {
         message: message.content,
         author: message.author,
+        created: message.createdAt,
         image: message.attachments.first() ? message.attachments.first().proxyURL : null,
     })
 })
