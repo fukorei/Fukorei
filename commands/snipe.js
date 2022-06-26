@@ -10,8 +10,8 @@ module.exports = {
         .setTitle(`${msg.author.username} sent:`)
         .setColor("#ddbec3")
         .setDescription(`${msg.message}`)
-        .setTimestamp(msg.createdAt)
         .setFooter({
+            text: `${msg.createdAt}`
             iconURL: msg.author.displayAvatarURL()
         })
         
