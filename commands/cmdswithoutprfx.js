@@ -161,5 +161,9 @@ module.exports = {
         else if(message.content.toLowerCase() === "trong trường hợp"){
             message.channel.send('Trong trường hợp page này bị điều tra bởi các cơ quan trực thuộc bộ công an (hoặc các tổ chức chính trị tương tự phục vụ cho nhà nước CHXHCNVN), tôi khẳng định mình không liên quan tới page hoặc những cá nhân khác trong page này. Tôi không rõ tại sao mình lại có mặt ở đây vào thời điểm này, có lẽ tài khoản của tôi đã được thêm bởi một bên thứ ba.')
         }
+
+        else if(message.content.toLowerCase() === "trong trường hợp + naku"){
+            message.channel.send('Trong trường hợp Group này bị điều tra bởi các cơ quan chức năng trực thuộc bộ công an (hoặc các tổ chức chính trị tương tự phục vụ cho nhà nước CHXHCNVN), tôi khẳng định mình không bán hay trồng cỏ Naku cho những cá nhân khác trong nhóm này bú. Có lẽ, cỏ Naku đã được cung cấp bởi một bên thứ ba.')
+        }
     }
 };
