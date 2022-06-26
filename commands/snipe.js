@@ -11,7 +11,7 @@ module.exports = {
         .setColor("#ddbec3")
         .setDescription(`${msg.message}`)
         .setFooter({
-            text: `${msg.created}`,
+            text: `Today at` + `${moment(msg.createdAt).format('hh:mm:ss')}`,
             iconURL: msg.author.displayAvatarURL()
         })
         
