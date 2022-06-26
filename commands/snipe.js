@@ -7,11 +7,11 @@ module.exports = {
         if(!msg) return message.channel.send('no message deleted')
 
         const embed = new MessageEmbed()
-        .setTitle(`${msg.author.username} said:`)
+        .setTitle(`${msg.author.username} sent:`)
         .setColor("#ddbec3")
         .setDescription(`${msg.message}`)
+        .setTimestamp(msg.createdAt)
         .setFooter({
-            text: `${msg.message.createdAt}`,
             iconURL: msg.author.displayAvatarURL()
         })
         
