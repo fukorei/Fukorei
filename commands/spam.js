@@ -2,6 +2,7 @@ module.exports = {
     name: "spam",
     run: async(client, message, args) => {
         let ping = message.mentions.users.first();
+        if(!ping) return message.channel.send('please mention a user to spam');
         if(message.author.bot) return;
 
         if (Number.isNaN(+args[0]))
