@@ -165,5 +165,10 @@ module.exports = {
         else if(message.content.toLowerCase() === "trong trường hợp + naku"){
             message.channel.send('Trong trường hợp Group này bị điều tra bởi các cơ quan chức năng trực thuộc bộ công an (hoặc các tổ chức chính trị tương tự phục vụ cho nhà nước CHXHCNVN), tôi khẳng định mình không bán hay trồng cỏ Naku cho những cá nhân khác trong nhóm này bú. Có lẽ, cỏ Naku đã được cung cấp bởi một bên thứ ba.')
         }
+
+        var badumtss = ["ba dum tss", "badum tss", "badumtss"]
+        if(badumtss.includes(message.content.toLowerCase())){
+            message.channel.send('https://cdn.discordapp.com/attachments/902548040399880243/902548399373553704/Ba_Dum_Tss_Sound_Effect.mp4')
+        }
     }
 };
