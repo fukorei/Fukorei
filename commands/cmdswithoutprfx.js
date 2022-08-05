@@ -166,7 +166,7 @@ module.exports = {
             message.channel.send('Trong trường hợp Group này bị điều tra bởi các cơ quan chức năng trực thuộc bộ công an (hoặc các tổ chức chính trị tương tự phục vụ cho nhà nước CHXHCNVN), tôi khẳng định mình không bán hay trồng cỏ Naku cho những cá nhân khác trong nhóm này bú. Có lẽ, cỏ Naku đã được cung cấp bởi một bên thứ ba.')
         }
 
-        else if(message.content.toLowerCase() === "trong trường hợp + naku"){
+        else if(message.content.toLowerCase() === "trong trường hợp đá"){
             message.channel.send('Trong trường hợp Group này bị điều tra bởi các cơ quan chức năng trực thuộc bộ công an (hoặc các tổ chức chính trị tương tự phục vụ cho nhà nước CHXHCNVN), tôi khẳng định mình không bán hay tàng trữ đá cho những cá nhân khác trong nhóm này bú. Có lẽ, số đá còn lại không được giấu ở đâu mà được cung cấp bởi một bên thứ ba.')
         }
 
