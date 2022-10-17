@@ -175,8 +175,10 @@ module.exports = {
             message.channel.send('https://cdn.discordapp.com/attachments/902548040399880243/902548399373553704/Ba_Dum_Tss_Sound_Effect.mp4')
         }
 
-        else if(message.content.toLowerCase() === "amogus"){
-            message.channel.send('sus')
+        var amogus = ["sus", "ඞ"]
+        if(message.content.toLowerCase() === "amogus"){
+        const randomsus = amogus[Math.floor(Math.random() * amogus.length)];
+        message.channel.send(randomsus)
         }
     }
 };
