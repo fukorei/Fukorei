@@ -175,7 +175,7 @@ module.exports = {
             message.channel.send('https://cdn.discordapp.com/attachments/902548040399880243/902548399373553704/Ba_Dum_Tss_Sound_Effect.mp4')
         }
 
-        else if(message.content.toLowerCase() === 'amogus'){
+        else if(message.content.toLowerCase() === "amogus"){
             message.channel.send('sus')
         }
     }
