@@ -59,7 +59,7 @@ module.exports = {
             client.commands.get('spam').run(client, message, args);
         }
     
-        else if(command === 'maths'){
+        else if(command === 'math'){
             client.commands.get('maths').run(client, message, args);
         }
     
