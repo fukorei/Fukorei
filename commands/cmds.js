@@ -27,12 +27,8 @@ module.exports = {
             message.channel.send(`<:mastery7:676440941325713467>`);
         }
     
-        else if(command === 'horny'){
+        else if(command === 'sex'){
             message.channel.send('UUUUUUUUWWWWWWWWWWOOOOOOOOOOOOOOOOOOGAAAAAJHGASJDHGASJHGDSSSSSSSSSSSSSSSSEEEEEEEEEEEEEEEEEEEEEEEEEEEGGGGGGGGGGGGGGGGGGGGGGGSSSSSSSSSSSSSSSSSSS');
-        }
-            
-        else if(command === 'sadge'){
-            message.channel.send('<:pepe_sadge:929713686615052298>')
         }
     
         else if(command === "help"){
