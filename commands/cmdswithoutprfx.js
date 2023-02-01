@@ -188,5 +188,9 @@ module.exports = {
         else if(message.content.toLowerCase() === "q1 rìa"){
             message.channel.send('W NỐI Q2E ÁC CHƯA KÌA Q3 CHỈ THẲNG ĐẦU ĐÁNH TAY NỘI TAI THIÊU ĐỐT SÔ LÔ CIUUUUUUUUUUU <:LETSFUCKINGGO:1016321956968136826><:LETSFUCKINGGO:1016321956968136826><:LETSFUCKINGGO:1016321956968136826>\nhttps://cdn.discordapp.com/attachments/606112569622659076/1047801793855361044/FB_IMG_1667714523403.jpg')
         }
+
+        else if(message.content.toLowerCase() === "phan ung cua tao"){
+            message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/1070369166449721344/323712471_1615327615591833_799687899885422790_n.mp4')
+        }
     }
 };
