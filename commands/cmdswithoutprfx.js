@@ -193,18 +193,10 @@ module.exports = {
             message.channel.send('https://cdn.discordapp.com/attachments/606112569622659076/1070369166449721344/323712471_1615327615591833_799687899885422790_n.mp4')
         }
 
-        else if(message.content.toLowerCase() === "60k cua t" ){
-            if(message.author.id == '732043268946133133'){
-            for (let i = 0; i>0; i++){
-                while(i>0){
-                setTimeout(() => {
-                    message.channel.send(`<@571911807749324810>`);
-                    message.channel.send(`Where boost`);
-                    message.channel.send(`<:mikewhat:806372341629976586>`);
-                }, ms(3600000))
-            }
-            }
+        else if(message.content.toLowerCase() === "where boost" ){
+            message.channel.send(`<@571911807749324810>`);
+            message.channel.send(`Where boost`);
+            message.channel.send(`<:mikewhat:806372341629976586>`);
         }
-        }
-    }
+}
 };
