@@ -198,5 +198,10 @@ module.exports = {
             message.channel.send(`Where boost`);
             message.channel.send(`<:mikewhat:806372341629976586>`);
         }
+
+        var si = ["skill issue", "skill issie"]
+        if(message.content.toLowerCase() === "amogus"){
+            message.channel.send("https://cdn.discordapp.com/attachments/606112569622659076/1074185233882157197/qa3rwsedrft.mp4")
+            }
 }
 };
