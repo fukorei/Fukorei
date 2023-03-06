@@ -19,6 +19,11 @@ module.exports = {
         args.forEach(index => {
             if (!isNaN(index)) {
                 switch (cSymbol) {
+                    case "x": {
+                        total *= Number(index)
+                        break;
+                    }
+
                     case "+": {
                         console.log(Number(index));
                         total += Number(index)
@@ -44,12 +49,6 @@ module.exports = {
                         total *= Number(index)
                         break;
                     }
-
-                    case "x": {
-                        total *= Number(index)
-                        break;
-                    }
-                    
                 }
             }
             if (symbols.includes(index)) cSymbol = index;
