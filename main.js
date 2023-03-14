@@ -49,9 +49,7 @@ client.on("messageCreate", async (message) => {
     if (message.author.bot) return;
 
     const blacklistArray = ["606409312411058176","763366076967813160"];
-    if (blacklistArray.includes(message.author.id)){
-        message.reply("https://cdn.discordapp.com/attachments/934793899300507722/1085187189111017482/FB_IMG_1677034255214.jpg")
-    };
+    if (blacklistArray.includes(message.author.id)) return;
 
     if (!message.content.toLowerCase().startsWith(prefix)) {
         client.commands.get('cmdswithoutprfx').run(client, message, args, ms, afks);
