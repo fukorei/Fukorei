@@ -107,5 +107,9 @@ module.exports = {
         else if(command === 'snipe'){
             client.commands.get('snipe').run(client, message, args);
         }
+
+        else if(command === 'gpt'){
+            client.commands.get('gpt').run(message);
+        }
     }
 }
