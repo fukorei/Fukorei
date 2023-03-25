@@ -8,7 +8,6 @@ const mongoose = require('mongoose');
 const afks = require('./schema/afkschema')
 
 const { Database } = require('quickmongo');
-const { Configuration, OpenAIApi } = require('openai');
 const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: new Intents(32767) });
 const url = process.env.mongooseConnectionString;

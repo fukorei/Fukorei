@@ -5,10 +5,12 @@ const configuration = new Configuration({
   const openai = new OpenAIApi(configuration);
 
 module.exports = {
-    name: "user",
+    name: "gpt",
     run: async(message) => {
+        const prompt = message.content.substring(6)
+
         const response = await openai.createCompletion({
-            model: "text-davinci-002",
+            model: "text-davinci-003",
             prompt,
             temperature: 0.7,
             max_tokens: 256,
@@ -16,6 +18,7 @@ module.exports = {
             frequency_penalty: 0,
             presence_penalty: 0,
         });
+
     const answer = response.data.choices[0].text;
     message.reply(answer);
     }
