@@ -10,7 +10,7 @@ module.exports = {
         const prompt = message.content.substring(6)
 
         const response = await openai.createCompletion({
-            model: "gpt-3.5-turbo",
+            model: "gpt-3.5-turbo-0301",
             prompt,
             temperature: 0.7,
             max_tokens: 2000,
