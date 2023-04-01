@@ -13,14 +13,13 @@ module.exports = {
             model: "text-davinci-003",
             prompt,
             temperature: 0.5,
-            max_tokens: 2000,
+            max_tokens: 192,
             top_p: 1,
             frequency_penalty: 0,
             presence_penalty: 0,
         });
 
     const answer = response.data.choices[0].text;
-    console.log(response.data)
     message.reply(answer);
     }
 };
