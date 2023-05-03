@@ -211,5 +211,10 @@ module.exports = {
         if(huat.includes(message.content.toLowerCase())){
             message.channel.send("https://cdn.discordapp.com/attachments/606112569622659076/1098287065654894682/caption.png")
         }
+
+        var women = ["wâu mừn", "wau mừn", "wau mun"]
+        if(women.includes(message.content.toLowerCase())){
+            message.channel.send("https://cdn.discordapp.com/attachments/606112569622659076/1102031700139184128/IMG_1646.mov")
+        }
 }
 };
