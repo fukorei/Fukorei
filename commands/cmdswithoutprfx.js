@@ -89,7 +89,25 @@ module.exports = {
 
 
         //airlines custom commands from here onwards:
-        if(message.guild.id !== "606112569622659072") return;
+        // if(message.guild.id !== "606112569622659072") return;
+
+        //linh le im mom
+        // if (message.channel.id === "921394718376611850"){
+        //     const anghiu = ["571911807749324810"];
+        //      if (anghiu.includes(message.author.id)) {
+        //        message.channel.send('linh lê im mồm')
+        // };
+        // }
+         
+
+        if (message.content.toLowerCase() === 'nerd'){
+            message.channel.send('https://cdn.discordapp.com/attachments/1301914339262988392/1358662265997492334/20250301_230844.jpg')
+        }
+
+        const ha = ["599952731351810048"];
+        if (ha.includes(message.author.id)) {
+            message.channel.send('<:sussssssssssss:1100427208348147853>')
+        };
 
         const ghevs = ["ge v s", "ghe vay sao", "ghe v s", "ghe v sao"]
         if (ghevs.includes(message.content.toLowerCase())) {
@@ -216,5 +234,15 @@ module.exports = {
         if(women.includes(message.content.toLowerCase())){
             message.channel.send("https://cdn.discordapp.com/attachments/606112569622659076/1102031700139184128/IMG_1646.mov")
         }
+        
+        var didyouknow = ["did you know", "did you know that", "dyk"]
+        if(didyouknow.includes(message.content.toLowerCase())){
+            message.channel.send("Did you know that in terms of sex, Kokomi is probably the most flexible unit you could go for? Not only is she Hydro, which would allow her to do all sorts of things with her saliva and your semen, but she is also a healer, which makes all sort of hardcore BDSM possible, because she can always heal herself. You can be as rough with her as you would like, and she can quickly recover both herself and you from fatigue so you can keep going for as long as possible. Not only that, but she is short and petite, so you can pick her up and do whatever you want with her. Kokomi is literally built for human dick. Also, for fun, you can have sex with her on top of water. Ungodly defense stat with high HP pool and healing means she can take cock all day, all shapes and sizes and still come back for more.||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​|| <@840145281806368798>")
+        }
+
+        var xl = ["xl", "xl agane", "xl agane oppa", "biết ông ai không"]
+        if(xl.includes(message.content.toLowerCase())){
+            message.channel.send('I cannot take it anymore. I am sick of Xiangling. I try to play Diluc. My Xiangling deals more damage. I try to play Yoimiya. My Xiangling deals more damage. I try to play Cyno. My Xiangling deals more damage. I do not even try to play Dehya. I want to play Klee. Her best team has Xiangling. I want to play Raiden, Childe - they both want Xiangling. She grabs me by the throat. I fish for her. I cook for her. I give her the Catch. She is not satisfied. I pull Engulfing Lightning. "I do not need this much er" She tells me. "Give me more field time." She grabs Bennett and forces him to throw himself off enemies. "You just need to funnel me more. I can deal more damage with Homa." I cannot pull for Homa, I do not have enough primogems. She grabs my credit card. It declines. "Guess this is the end." She grabs Gouba. She says "Gouba, get them." There is no hint of sadness in her eyes. Nothing but pure, no icd pyro application. What a cruel world.')
+        }
+    }
 }
-};

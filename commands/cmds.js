@@ -3,7 +3,7 @@ module.exports = {
     description: "the bots commands",
     run: async (client, message, args, prefix, ms, command, moment, url, db) => {
 
-        const blacklistArray = ["606409312411058176","763366076967813160"];
+        const blacklistArray = ["606409312411058176"];
         if (blacklistArray.includes(message.author.id)) return;
 
         else if(command === 'ping'){

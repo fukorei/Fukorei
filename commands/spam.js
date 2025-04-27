@@ -8,7 +8,7 @@ module.exports = {
         if (Number.isNaN(+args[0]))
             return message.reply('that is not a valid amount of times to ping!')
 
-        if (+args[0] > 5)
+        if (+args[0] > 100)
             return message.reply('listen man im hosted on heroku stop tf is wrong with you <:mikewhat:806372341629976586> ')
 
         for (let i = 0; i < +args[0]; i++)
